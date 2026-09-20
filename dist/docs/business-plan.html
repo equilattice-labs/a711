@@ -1,0 +1,673 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>LATQOR — Business Plan</title><style>@page{size:A4;margin:16mm 15mm 19mm}*{box-sizing:border-box}body{font-family:Arial,sans-serif;color:#243a2c;font-size:9.8pt;line-height:1.5;margin:0}a{color:#375e40;text-decoration:none;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;break-after:avoid;letter-spacing:-.025em;color:#143a2b}h1{font-size:38pt}h2{font-size:22pt;margin-top:27px;padding-top:12px;border-top:1px solid #dbe3d2}h3{font-size:14pt;margin-top:23px}h4{font-size:11pt}p{orphans:3;widows:3}li{margin-bottom:6px}strong{font-weight:650}table{width:100%;border-collapse:collapse;margin:18px 0;font-size:7.5pt;line-height:1.5}thead{display:table-header-group}tr{break-inside:avoid}th{text-align:left;background:#e7efdb;padding:8px;border:1px solid #d5dfc9;font-size:7.2pt}td{vertical-align:top;border:1px solid #dfe6d7;padding:7px}code{font-family:Consolas,monospace;font-size:8pt;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#edf1e6;padding:12px;border-radius:3px;break-inside:avoid}blockquote{border-left:3px solid #9abc6a;margin-left:0;padding:5px 16px;background:#f3f6ed}.cover{height:253mm;break-after:page;background:#f1f5e9;position:relative;padding:28mm 17mm;overflow:hidden}.cover .brand{display:flex;align-items:center;gap:13px;letter-spacing:-1px;font-size:24pt;font-weight:700}.brand svg{width:40px;height:40px}.cover .eyebrow{font-size:8pt;letter-spacing:2px;margin-top:47mm;color:#738964}.cover h1{font-size:47pt;line-height:1.08;font-weight:500;margin:17px 0 24px;letter-spacing:-3px}.cover .sub{font-size:13pt;line-height:1.6;color:#677d5e;max-width:440px}.cover .meta{position:absolute;left:17mm;right:17mm;bottom:26mm;border-top:1px solid #c4d1b5;padding-top:20px;font-size:9pt;display:flex;justify-content:space-between}.cover .note{position:absolute;bottom:11mm;left:17mm;font-size:7pt;color:#7b8970}.orbit{position:absolute;width:400px;height:400px;right:-180px;top:10px;border:1px solid #bfd0a0;border-radius:50%;opacity:.6}.orbit:before,.orbit:after{content:'';position:absolute;inset:0;border:1px solid #bfd0a0;border-radius:50%;transform:scaleX(.45) rotate(35deg)}.orbit:after{transform:scaleX(.75) rotate(-35deg)}.document>h1:first-child,.document>h2:first-of-type{display:none}.document>h1{font-size:28pt}</style></head><body><div class="cover"><div class="orbit"></div><div class="brand"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g transform="translate(0 0) scale(1.0)"><path d="M51.2 17.4A24 24 0 1 0 55.8 35.2" stroke="#143a2b" stroke-width="5.7" fill="none" stroke-linecap="round"/><path d="M26 14V41H45" stroke="#143a2b" stroke-width="6.5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/><circle cx="56" cy="24" r="3.7" fill="#143a2b" stroke="none" stroke-width="1"/></g></svg><span>LATQOR</span></div><div class="eyebrow">BUSINESS PLAN / SEPTEMBER 2026</div><h1>A global view.<br>An onchain<br>opportunity.</h1><p class="sub">The strategy, economics and execution plan for a new home of global index perpetuals.</p><div class="meta"><span>latqor.xyz &nbsp; / &nbsp; @latqor</span><span>Strategy · Product · Go-to-market</span></div><p class="note">Independent project. Current release: experimental Robinhood Chain testnet.</p></div><article class="document"><h1 id="latqor">LATQOR</h1>
+<h2 id="global-market-conviction-one-onchain-workspace">Global market conviction. One onchain workspace.</h2>
+<p><strong>Business plan · 18 September 2026 · Version 1.0</strong><br />
+<strong>Audience:</strong> prospective founders, investors, operators, liquidity providers and technical reviewers.<br />
+<strong>Selected identity:</strong> LATQOR · <code>latqor.xyz</code> · <code>@latqor</code><br />
+<strong>Name:</strong> latitude + core; pronounced “LAT-core.” The selected domain and handle are a naming recommendation until the owner completes registration. See the naming evidence delivered with the project for the time and limits of availability checks.</p>
+<h3 id="executive-investment-thesis">Executive investment thesis</h3>
+<p>LATQOR is an independent project developing an onchain venue for global stock-benchmark perpetual futures on Robinhood Chain. Its wedge is a clear, session-aware trading experience: understand the market, see whether its reference session is open, inspect the execution and liquidation rules, and manage exposure through a single wallet interface.</p>
+<p>The long-term ambition is a programmable global macro trading layer. The testnet product covers <strong>32 synthetic benchmark markets with up to 20x leverage</strong>, giving users the reference project's breadth of market discovery and simulated exposure. A future licensed real-money launch has a separate, deliberately staged scope: prove that a small group of eligible, experienced traders repeatedly uses three well-specified benchmark markets, with reliable data, controlled leverage and solvent settlement. Production expansion follows evidence about demand, execution quality and risk capacity.</p>
+<p>The delivered product is a <strong>deployed version 2 testnet prototype</strong>, not a live financial service. Its two contracts are source-verified on the testnet explorer, 13 local EVM tests passed, all 32 synthetic markets were confirmed enabled onchain, and a real faucet → approval → deposit → 20x open → close → withdrawal smoke test passed on 18 September 2026. It uses a custom faucet token, operator-published demonstration prices and bounded settlement. This demonstrates the transaction loop; it does not establish production security, licensing, market liquidity or business demand. Testnet balances have no monetary value. The project has no verified customers, booked revenue, signed partners or committed liquidity providers at the date of this plan.</p>
+<p>The proposed commercial model is a 6 basis point execution fee per filled notional, with 2.6 basis points remaining after modeled variable allocations. At $90,000 of monthly fixed operating expense, this model requires approximately <strong>$346.2 million of monthly executed volume</strong> to break even before tax and exceptional costs. The base case does not reach monthly operating break-even in its first modeled year. This is a venture hypothesis requiring disciplined validation, not a return forecast.</p>
+<p>An illustrative <strong>$2.5 million operating capital raise</strong> would fund $450,000 of prelaunch work, 18 months of $90,000 fixed operating expense, and $430,000 of contingency, before revenue. Production trading collateral, an initial insurance reserve and liquidity-provider capital are separate funding requirements. No token sale is assumed.</p>
+<h2 id="1-the-problem-and-the-customer">1. The problem and the customer</h2>
+<h3 id="a-specific-job-to-be-done">A specific job to be done</h3>
+<p>An experienced onchain trader develops a view on Japanese equities after an earnings cycle, or wants to compare Japanese, German and UK equity risk. Today that trader may face fragmented accounts, inconsistent collateral, unfamiliar market schedules and uncertainty about what an onchain quote actually represents outside the underlying exchange's session.</p>
+<p>LATQOR's proposed job is: <strong>“Let me express and manage a transparent benchmark view from my wallet, with clear market hours, execution conditions and collateral accounting.”</strong> Convenience matters, but knowing when a price can be trusted is the defining product requirement.</p>
+<p>The product offers derivative exposure to a benchmark. It does not confer ownership of underlying shares, voting rights, dividends or a claim on an ETF. Benchmark names and index values may be subject to licensing. Local index points are a quotation convention; settlement currency and the return calculation must be stated separately.</p>
+<h3 id="initial-customer-profile">Initial customer profile</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Relevant behavior</th>
+<th>Initial service</th>
+<th>Exclusion or qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Experienced onchain macro traders</td>
+<td>Already understand wallet custody, margin and liquidation</td>
+<td>32-market testnet; three licensed markets proposed for initial real-money service</td>
+<td>Only regions and customer categories approved by counsel</td>
+</tr>
+<tr>
+<td>Small professional trading teams</td>
+<td>Need programmatic access and observable risk</td>
+<td>Documented API and risk reports after the consumer workflow is stable</td>
+<td>Identity, entity and contractual review before production access</td>
+</tr>
+<tr>
+<td>Market commentators and educators</td>
+<td>Explain markets and send high-intent traffic</td>
+<td>Public session atlas, educational scenario tools, disclosed referral terms</td>
+<td>No undisclosed sponsorship or misleading performance claims</td>
+</tr>
+<tr>
+<td>Liquidity providers and market makers</td>
+<td>Allocate risk capital against measurable execution flow</td>
+<td>Independently reviewed risk terms and reporting</td>
+<td>Sophisticated counterparties; no retail yield promise</td>
+</tr>
+</tbody>
+</table>
+<p>The initial audience excludes users seeking passive guaranteed income, beginners who do not understand leverage, and users in unsupported jurisdictions. Country availability is a launch decision made with qualified counsel, not an implication of a permissionless blockchain.</p>
+<h3 id="evidence-to-obtain-before-claiming-product-market-fit">Evidence to obtain before claiming product-market fit</h3>
+<p>Conduct 30 structured interviews across the first two segments. Ask about the last actual global-equity trade, current venue, spread, collateral friction, market-hour surprises and willingness to change behavior. Record demonstrated behavior separately from enthusiasm. Recruit 50 supervised testnet participants; require at least 20 to return independently in a later week and at least 10 to explain the closed-session execution policy correctly. No incentive should depend on notional volume or aggressive leverage.</p>
+<h2 id="2-market-opportunity-and-positioning">2. Market opportunity and positioning</h2>
+<h3 id="bottom-up-opportunity-model">Bottom-up opportunity model</h3>
+<p>The addressable market cannot be inferred from total equity capitalization. Equity ownership is not perpetual trading demand, and trading volume is not revenue.</p>
+<p>For a first operating target, suppose LATQOR could eventually serve <strong>10,000 eligible active traders</strong>, each executing <strong>$80,000 per month</strong>. That would produce $800 million in monthly notional, $480,000 in monthly gross execution fees at 6 basis points, and $208,000 in monthly contribution at 2.6 basis points. These are planning assumptions; neither audience size nor trading frequency has been validated. Revenue remains sensitive to fee competition, concentration in a few traders, and the cost of servicing volatile flow.</p>
+<p>The base first-year exit target of 3,300 active traders represents 33% of this deliberately small serviceable target, not a share of the global stock market. It is still ambitious. A more credible near-term milestone is 100 independently retained eligible traders with positive contribution and no material operational incidents.</p>
+<h3 id="competitive-reference-points">Competitive reference points</h3>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Observed strength</th>
+<th>Implication for LATQOR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perpdex / PerpIndex</td>
+<td>Latest 18 September snapshot lists 32 benchmarks, one USDG balance, local index points and orders executed at the next live reference price</td>
+<td>Category validation and an interaction reference; breadth alone is not defensible</td>
+</tr>
+<tr>
+<td>Hyperliquid</td>
+<td>Broad asset coverage, strong trading destination, developer distribution and execution-focused product story</td>
+<td>Competing on generic “trade anything” is weak; LATQOR needs a specific workflow and transparent market policy</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>Product-first navigation and direct wallet-to-trade experience</td>
+<td>Minimize friction between discovery and a comprehensible ticket</td>
+</tr>
+<tr>
+<td>Aave</td>
+<td>Clear product segmentation, visible risk information and developer tools</td>
+<td>Explain product maturity and risk with the same care as benefits</td>
+</tr>
+<tr>
+<td>Ethena</td>
+<td>Product mechanism, transparency dashboards and methodology disclosures</td>
+<td>Back important assertions with inspectable data and definitions</td>
+</tr>
+</tbody>
+</table>
+<p>This is a focused public-site review, not a comprehensive market-share study or an audit of competitor contracts. The precise observed facts, sources and limitations are in <a href="research.md">research.md</a>.</p>
+<h3 id="what-can-become-defensible">What can become defensible</h3>
+<ol>
+<li><strong>Session and execution intelligence:</strong> licensed calendars, opening-auction rules, holiday coverage, data quality and predictable execution around gaps.</li>
+<li><strong>A verified distribution channel:</strong> educators and trading tools that send retained, eligible users rather than incentive-driven volume.</li>
+<li><strong>Risk and execution history:</strong> measurable slippage, oracle uptime, independently reviewed reserves and disciplined market expansion.</li>
+<li><strong>Integration quality:</strong> a stable interface for trading tools, reporting and account abstraction after core execution is proven.</li>
+</ol>
+<p>No defensibility is created merely by deploying to Robinhood Chain or by reproducing another interface. All LATQOR branding, copy, illustrations and code should be original; competitor trademarks and proprietary assets are not part of the product.</p>
+<h2 id="3-product-scope-delivered-next-and-production">3. Product scope: delivered, next and production</h2>
+<h3 id="the-delivered-prototype">The delivered prototype</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Current scope</th>
+<th>Material limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public website</td>
+<td>Vue-based English landing page and trading workspace</td>
+<td>A product demonstration, not a production exchange</td>
+</tr>
+<tr>
+<td>Wallet connection</td>
+<td>Compatible injected EVM wallet, chain selection and transaction prompts</td>
+<td>Wallet connection proves account control; it is not KYC or a persistent authenticated server session</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Robinhood Chain Testnet, chain ID 46630</td>
+<td>Mainnet chain ID 4663 is a separate network and is outside this deployment</td>
+</tr>
+<tr>
+<td>Collateral</td>
+<td>Custom six-decimal dUSD faucet token</td>
+<td>No value; not USDG, USDC, a redeemable stablecoin or an official Robinhood token</td>
+</tr>
+<tr>
+<td>Markets</td>
+<td>32 synthetic benchmarks across the Americas, Europe, Asia/Pacific and Middle East/Africa; featured NIKKEI, DAX and FTSE100; includes JCI</td>
+<td>Unlicensed demonstration values; not live index feeds; the list includes regional STOXX50 and must not be called “32 countries”</td>
+</tr>
+<tr>
+<td>Trading loop</td>
+<td>Faucet, approve, deposit, open long/short, close and withdraw</td>
+<td>Contract constraints and deployed receipt govern actual behavior</td>
+</tr>
+<tr>
+<td>Risk limits</td>
+<td>1–20x leverage, isolated position margin of 1–10,000 dUSD</td>
+<td>Prototype limits are not evidence that comparable real-money exposure is safe</td>
+</tr>
+<tr>
+<td>Price authority</td>
+<td>Operator publishes demonstration quotes; 15-minute freshness bound</td>
+<td>Centralized mock oracle; fresh does not mean economically correct</td>
+</tr>
+<tr>
+<td>Settlement</td>
+<td>Profit and loss capped at the position's initial margin; payout capacity reserved</td>
+<td>Intentionally bounded simulation, not uncapped perpetual economics</td>
+</tr>
+<tr>
+<td>Liquidation</td>
+<td>Eligible at 90% initial-margin loss in the prototype</td>
+<td>No independently operated keeper network is implied</td>
+</tr>
+<tr>
+<td>Stale-price recovery</td>
+<td>Position owner can recover initial margin at zero PnL after 24 hours without a quote</td>
+<td>Demonstration escape hatch; not fair-value settlement for real-money derivatives</td>
+</tr>
+<tr>
+<td>Trading fees / funding</td>
+<td>No production fee or funding engine</td>
+<td>Commercial fee assumptions below are future design proposals</td>
+</tr>
+<tr>
+<td>Market sessions</td>
+<td>Production session-aware execution is specified below</td>
+<td>The prototype does not implement a licensed exchange calendar or closed-session queue</td>
+</tr>
+</tbody>
+</table>
+<p>At 20x, an approximately 4.5% adverse synthetic index move reaches the prototype's 90%-margin liquidation threshold; an approximately 5% move reaches its ±100%-margin PnL cap, before integer-rounding effects. The higher ceiling expands simulation coverage, not capital safety. All 32 test markets share the same synthetic-price and bounded-settlement model.</p>
+<p>Contract source, tests, deployment records and the engineering handoff are the source of truth for a particular build. A mined deployment must be verified on the correct chain before it is described as deployed. A successful local demonstration is not a public launch.</p>
+<p><strong>Observed deployment evidence:</strong> the version 2 <a href="https://explorer.testnet.chain.robinhood.com/address/0xaa790F4610a38e925f19fB054E2ADf68cD8de38d?tab=contract">sandbox engine</a> and <a href="https://explorer.testnet.chain.robinhood.com/address/0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea?tab=contract">dUSD token</a> are deployed on chain 46630. The completed smoke test exercised 20x leverage, confirmed all 32 markets enabled, closed position 1, <a href="https://explorer.testnet.chain.robinhood.com/tx/0x599c0d291f4fd5d5567109cccce9bdbf90eb9cd91cd787fbd2adc7354bf673b8">withdrew its test collateral</a>, and reconciled 500,000 <strong>worthless dUSD</strong> in the engine to accounted balances. This reserve is not $500,000 of assets, TVL, LP investment or revenue. Source verification means published code matches explorer verification requirements; it is not an independent security audit. Receipts and the 13-test local validation record are in <code>contracts/deployments/</code>; earlier version 1 receipts are historical only.</p>
+<p>A supplied optional local keeper republishes all 32 fixed demonstration quotes every five minutes when an operator starts it. A one-cycle check passed and the process was stopped. No hosted or continuously running service is part of the handoff; see the runbook to operate a supervised demonstration.</p>
+<h3 id="first-production-product-if-all-gates-pass">First production product, if all gates pass</h3>
+<p>Start with <strong>no more than three licensed benchmarks</strong>, one approved collateral asset and isolated margin. Japan, Germany and the UK are the initial research candidates, selected to span Asian and European sessions and recognizable macro themes. Their final inclusion depends on actual licensing, data quality, customer demand and hedge availability; none is commercially secured. Maintain one account balance for convenience while isolating each position's committed margin. Cross-margin, portfolio netting and automatic collateral rehypothecation are not launch features.</p>
+<p>The public interface must show the reference instrument, quotation units, source timestamp, session status, collateral asset, maximum leverage, applicable fees, estimated liquidation level and the precise policy for an order that cannot execute immediately. Transaction details should be inspectable before wallet approval.</p>
+<p>A watchlist and session atlas can remain useful without a connected wallet. The trading workflow is: review market → connect wallet → complete required eligibility checks → fund approved collateral → preview order and risk → sign → inspect fill and position → close → withdraw. Deposits, trading and withdrawals require observable success or failure states.</p>
+<h3 id="expansion-options-after-evidence">Expansion options after evidence</h3>
+<p>Add markets only when each passes data licensing, sufficient trading demand, risk modeling and liquidity criteria. API access, professional reporting and third-party interface integrations follow reliable first-party execution. A token, DAO or referral-point program is not needed to validate the business and is not promised.</p>
+<h2 id="4-execution-data-and-market-integrity">4. Execution, data and market integrity</h2>
+<h3 id="benchmark-specification">Benchmark specification</h3>
+<p>Every production market needs a versioned market specification: index administrator, exact index variant, currency, price-return versus total-return basis, official session calendar, time zone and daylight-saving rules, data license, primary and secondary data sources, quote precision, settlement formula and exceptional-event procedure. A shorthand such as “NIKKEI” is not a legal or economic specification.</p>
+<p>For an entry notional <code>N</code>, entry index value <code>P0</code>, exit value <code>P1</code>, and direction <code>s</code> of +1 for long or −1 for short, the proposed baseline price-return exposure is <code>PnL = s × N × (P1 / P0 − 1)</code>, denominated in the settlement asset, before funding and fees. This does not automatically add currency exposure. Any FX-linked product must have a separate specification and data source.</p>
+<h3 id="proposed-session-policy">Proposed session policy</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Order behavior</th>
+<th>Position / liquidation behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open session; valid fresh feed</td>
+<td>Execute subject to price bounds, liquidity and risk caps</td>
+<td>Mark positions and permit liquidation under published rules</td>
+</tr>
+<tr>
+<td>Normal overnight or holiday closure</td>
+<td>Accept an explicitly queued instruction only; reserve its required margin; allow cancellation until execution cutoff</td>
+<td>Show last valid price and its timestamp; do not imply fresh continuous discovery</td>
+</tr>
+<tr>
+<td>First valid post-open reference</td>
+<td>Execute queued instructions only if unexpired, within user bounds and adequately margined</td>
+<td>Apply reopening checks and a published grace/recovery policy; gap losses remain possible</td>
+</tr>
+<tr>
+<td>Feed stale, disputed, missing or zero</td>
+<td>Stop price-sensitive execution; expire or retain orders according to disclosed TTL</td>
+<td>Suspend price-dependent liquidations; expose incident status</td>
+</tr>
+<tr>
+<td>Exchange halt / exceptional event</td>
+<td>Close that market to new risk and publish the applicable procedure</td>
+<td>Reduce or settle exposure only using previously disclosed valid-reference rules</td>
+</tr>
+<tr>
+<td>Sequencer outage or recovery</td>
+<td>Reject new risk while down and during recovery grace</td>
+<td>Resume only after fresh data and chain-health checks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>“Submit any time” does not mean “fill any time at a fresh equity price.”</strong> An order queued over a weekend can face an opening gap or fail its bounds. Users must see this before submission. A calendar service should cover exchange holidays, extraordinary closures, daylight saving and early closes; a weekday-only clock is insufficient.</p>
+<p>For an initial production implementation, it may be safer to disable order creation when a reference session is closed than to ship an incomplete queue. The final policy must match audited contract and keeper behavior exactly. This plan does not claim that a queue is in the delivered prototype.</p>
+<h3 id="oracle-architecture">Oracle architecture</h3>
+<p>Robinhood's official documentation describes Chainlink feeds and Data Streams, but it does not establish that all intended national-index products are licensed and available to LATQOR. Obtain written market-by-market coverage, redistribution and derivative-use rights before using a provider name in marketing.</p>
+<p>The production adapter should verify positive values, decimals, sequence/replay constraints, timestamp freshness, signed-report validity, per-market deviation limits and L2 sequencer health. Validate a licensed secondary reference; disagreement beyond a published threshold pauses execution rather than silently switching an economic benchmark. A staleness threshold must reflect the actual feed heartbeat and market session, not an arbitrary 15-minute prototype setting.</p>
+<p>Stock Token feeds may include reinvested dividends through a token multiplier. They must not be substituted for cash-index or headline-share feeds without specifying the resulting economic difference. Index changes, rebalance events and data corrections need versioned handling.</p>
+<h2 id="5-liquidity-margin-and-solvency">5. Liquidity, margin and solvency</h2>
+<h3 id="production-architecture-decision">Production architecture decision</h3>
+<p>The proposed initial design is a collateralized liquidity vault that takes the residual side of trader exposure, with external professional hedging where legal and operationally viable. This is a design hypothesis; it needs an independent risk review before implementation. A professional market-maker RFQ design may be preferable if the vault cannot secure reliable hedges or withstand opening gaps.</p>
+<p>Liquidity providers earn the modeled share of fees and bear specified inventory and counterparty risks. Fee share is variable income, not a guaranteed APY. Trader profits are liabilities to the liquidity system, not operating revenue. The business must not count collateral deposits, LP deposits or unrealized trader losses as customer revenue.</p>
+<h3 id="initial-risk-framework-to-validate">Initial risk framework to validate</h3>
+<ul>
+<li>For a future real-money beta, start at at most 5x leverage and lower it when gap scenarios or hedge availability require; use isolated margin and explicit per-account limits. The 20x <strong>synthetic testnet</strong> ceiling is not a production leverage commitment.</li>
+<li>Set per-market gross and net open-interest caps from stress loss capacity, not nominal TVL. Initial illustrative limits are gross notional no greater than 0.5× eligible LP equity for a market, combined gross notional no greater than 1.5×, and a tighter correlated net-directional cap. These are candidate limits, not certified safe values.</li>
+<li>Mark LP net asset value after accrued fees, trader liabilities, hedge valuations, funding and impairment. Show concentration and liquidity haircuts.</li>
+<li>Test single-market 10% gaps, correlated 20% equity moves, delayed oracle updates, collateral depeg, illiquid hedges, bridge interruption and a withdrawal rush. Combine shocks; isolated single-variable tests understate risk.</li>
+<li>Treat closed-session exposure as unhedgeable unless the actual hedge is available. Tighten new-risk caps before closures and publish the policy in advance.</li>
+<li>Gate LP withdrawals on realized available liquidity and a disclosed queue. Never promise instant redemption while capital supports open trader liabilities.</li>
+<li>Keep protocol operating cash, user collateral, LP equity and restricted insurance assets separately accounted for and separately controlled.</li>
+</ul>
+<p>Illustrative capital targets for a private beta are <strong>$5 million of independently committed LP equity</strong> and <strong>$250,000 of initial restricted risk reserve</strong>. Neither is secured. These amounts do not prove adequate capitalization; scenario losses determine the actual required capital and OI caps. They are separate from the $2.5 million operating-capital request.</p>
+<h3 id="funding-and-liquidations">Funding and liquidations</h3>
+<p>Production funding should converge perp exposure toward its specified reference without turning a stale cash-index price into artificial tradable information. Use a documented premium/skew methodology, bounded updates and published caps. Define whether funding accrues during closures and why; a conservative initial option is to suspend premium-based funding when no valid tradable reference exists and separately disclose any inventory charge. Funding flows between counterparties or LPs and traders; it is excluded from modeled protocol revenue.</p>
+<p>Maintenance margin and liquidation parameters must be calibrated using gap data and transaction latency. Independent keepers should perform permissionless, ideally partial liquidation against valid data, with deterministic incentives and recovery procedures. Show the difference between an estimated liquidation level and guaranteed execution; opening gaps can cross both liquidation and bankruptcy levels.</p>
+<p>The loss waterfall should be fixed in contracts and customer terms: position margin → designated LP risk capital → restricted insurance under defined triggers → explicitly disclosed emergency resolution. Do not silently socialize losses or describe insurance as a guarantee. If an automatic deleveraging mechanism is chosen, document allocation priority and affected user rights before launch.</p>
+<h2 id="6-compliance-and-commercial-prerequisites">6. Compliance and commercial prerequisites</h2>
+<p>A legal entity and qualified jurisdiction-specific counsel must determine the classification of the product, operator, frontend, liquidity vault and marketing. The review must address derivatives dealing and venue permissions, financial promotions, customer categorization, AML/sanctions duties, recordkeeping, privacy and complaints. Decentralized settlement and English-language marketing do not remove these obligations.</p>
+<p>Before production access, adopt a written country and customer-type matrix. Default to no real-money access where permission or required controls are unresolved. Evaluate the US, UK, EEA, China and other intended markets separately; the same rule cannot be assumed to apply everywhere. The FCA's published ban on derivatives referencing certain cryptoassets is not, by itself, a classification decision for an equity-index derivative. Counsel must assess the actual product and applicable CFD, futures or securities regime.</p>
+<p>Required commercial agreements include benchmark trademark/derivative licensing, real-time and historical data use, public display and redistribution rights, hedge venue and market-maker terms, oracle and infrastructure service levels, and collateral issuance/redemption exposure. A paid API key alone may not authorize redistribution or derivative creation. Do not claim partnerships with Robinhood, Chainlink, benchmark administrators or liquidity providers without a signed and publishable basis.</p>
+<p>Use an original visual identity and independently written software. The website should say “Built on Robinhood Chain” only as a factual infrastructure description and identify LATQOR as independent. All public claims about audits, reserves, uptime and deployment require dated evidence. No token price, return, guaranteed yield or unannounced airdrop is part of the launch message.</p>
+<h2 id="7-business-model-and-financial-assumptions">7. Business model and financial assumptions</h2>
+<h3 id="proposed-fee-waterfall">Proposed fee waterfall</h3>
+<p>One basis point is 0.01% of executed notional. Opening and closing are separate executions; a $10,000 open followed by a $10,000 close produces $20,000 of reported notional and $12 of fees at 6 basis points. Do not count the same execution again as both sides of a matched trade in public volume reporting.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Basis points of executed volume</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gross execution fee</td>
+<td style="text-align: right;">6.00</td>
+<td>Customer trading fee before allocations</td>
+</tr>
+<tr>
+<td>LP / market-maker allocation</td>
+<td style="text-align: right;">−2.00</td>
+<td>Variable liquidity servicing cost</td>
+</tr>
+<tr>
+<td>Referral / distribution allocation</td>
+<td style="text-align: right;">−0.50</td>
+<td>Assumes every execution bears the weighted-average allocation</td>
+</tr>
+<tr>
+<td>Variable oracle / execution data</td>
+<td style="text-align: right;">−0.25</td>
+<td>Additional to fixed infrastructure subscriptions</td>
+</tr>
+<tr>
+<td>Restricted insurance allocation</td>
+<td style="text-align: right;">−0.50</td>
+<td>Not available to fund ordinary operations</td>
+</tr>
+<tr>
+<td>Keeper / transaction subsidy</td>
+<td style="text-align: right;">−0.15</td>
+<td>Variable operational servicing</td>
+</tr>
+<tr>
+<td><strong>Operating contribution</strong></td>
+<td style="text-align: right;"><strong>2.60</strong></td>
+<td><strong>43.33% of gross execution fees</strong></td>
+</tr>
+</tbody>
+</table>
+<p>These are unnegotiated assumptions. Actual accounting treatment of pass-through allocations and insurance transfers should be set with an accountant. This model uses a cash contribution view so restricted amounts are not mistaken for spendable operating cash. Slippage and spread are customer execution costs, not silently assumed revenue. Funding, collateral interest, token sales and licensing/API revenue are excluded.</p>
+<h3 id="fixed-monthly-operating-expense">Fixed monthly operating expense</h3>
+<table>
+<thead>
+<tr>
+<th>Cost category</th>
+<th style="text-align: right;">Monthly USD</th>
+<th>Composition / assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core team</td>
+<td style="text-align: right;">56,000</td>
+<td>Two protocol engineers, frontend/product, risk, founder/operations and growth coverage; illustrative blended costs</td>
+</tr>
+<tr>
+<td>Ongoing legal / compliance</td>
+<td style="text-align: right;">10,000</td>
+<td>Retainer and operating support; launch legal work is budgeted separately</td>
+</tr>
+<tr>
+<td>Infrastructure, monitoring and fixed data</td>
+<td style="text-align: right;">7,000</td>
+<td>Redundant RPC, indexing, support tooling and subscriptions</td>
+</tr>
+<tr>
+<td>Acquisition experiments</td>
+<td style="text-align: right;">12,000</td>
+<td>Capped paid channels; no open-ended volume rewards</td>
+</tr>
+<tr>
+<td>Administration and customer operations</td>
+<td style="text-align: right;">5,000</td>
+<td>Accounting, tools and general support</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>90,000</strong></td>
+<td><strong>$1,080,000 per 12 modeled months</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scenario-model-first-12-months-after-a-permitted-mainnet-launch">Scenario model: first 12 months after a permitted mainnet launch</h3>
+<p>The model clock begins with a qualified commercial launch, not today and not testnet deployment. All scenarios assume the same fee waterfall and fixed cost to isolate adoption sensitivity. Monthly active traders execute at least one qualifying trade; their notional includes both opening and closing fills. Data are available in <a href="financial-model.csv">financial-model.csv</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Bear</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month 1 active traders</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr>
+<td>Month 12 active traders</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">3,300</td>
+<td style="text-align: right;">9,000</td>
+</tr>
+<tr>
+<td>Monthly notional per active trader</td>
+<td style="text-align: right;">$40,000</td>
+<td style="text-align: right;">$80,000</td>
+<td style="text-align: right;">$120,000</td>
+</tr>
+<tr>
+<td>Year 1 executed notional</td>
+<td style="text-align: right;">$148,400,000</td>
+<td style="text-align: right;">$1,233,600,000</td>
+<td style="text-align: right;">$4,500,000,000</td>
+</tr>
+<tr>
+<td>Year 1 gross execution fees</td>
+<td style="text-align: right;">$89,040</td>
+<td style="text-align: right;">$740,160</td>
+<td style="text-align: right;">$2,700,000</td>
+</tr>
+<tr>
+<td>Year 1 variable allocations</td>
+<td style="text-align: right;">$50,456</td>
+<td style="text-align: right;">$419,424</td>
+<td style="text-align: right;">$1,530,000</td>
+</tr>
+<tr>
+<td>Year 1 operating contribution</td>
+<td style="text-align: right;">$38,584</td>
+<td style="text-align: right;">$320,736</td>
+<td style="text-align: right;">$1,170,000</td>
+</tr>
+<tr>
+<td>Year 1 fixed operating expense</td>
+<td style="text-align: right;">$1,080,000</td>
+<td style="text-align: right;">$1,080,000</td>
+<td style="text-align: right;">$1,080,000</td>
+</tr>
+<tr>
+<td><strong>Year 1 operating result</strong></td>
+<td style="text-align: right;"><strong>−$1,041,416</strong></td>
+<td style="text-align: right;"><strong>−$759,264</strong></td>
+<td style="text-align: right;"><strong>+$90,000</strong></td>
+</tr>
+<tr>
+<td>Month 12 executed notional</td>
+<td style="text-align: right;">$30,000,000</td>
+<td style="text-align: right;">$264,000,000</td>
+<td style="text-align: right;">$1,080,000,000</td>
+</tr>
+<tr>
+<td>Month 12 contribution</td>
+<td style="text-align: right;">$7,800</td>
+<td style="text-align: right;">$68,640</td>
+<td style="text-align: right;">$280,800</td>
+</tr>
+<tr>
+<td><strong>Month 12 operating result</strong></td>
+<td style="text-align: right;"><strong>−$82,200</strong></td>
+<td style="text-align: right;"><strong>−$21,360</strong></td>
+<td style="text-align: right;"><strong>+$190,800</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Operating results exclude one-time prelaunch expenditure, financing, taxes and catastrophic trading losses. The bull case must not be read as guaranteed profitability; its higher volume also increases operational and inventory demands that could raise fixed or variable costs.</p>
+<p><strong>Break-even:</strong> <code>$90,000 / 0.00026 = $346,153,846</code> monthly executed notional. At $80,000 monthly volume per active trader, approximately <strong>4,327 active traders</strong> are required. If gross fees compress from 6 to 4 basis points while the modeled 3.4 basis points of allocations remain unchanged, contribution falls to 0.6 basis points and break-even rises to <strong>$1.5 billion per month</strong>. Fee competitiveness is a central business risk.</p>
+<h3 id="retention-and-acquisition-economics">Retention and acquisition economics</h3>
+<p>At the base notional assumption, contribution is <strong>$20.80 per active trader-month</strong>. An illustrative 85% monthly active-retention rate gives <code>1 / (1 − 0.85) = 6.67</code> expected active months and <strong>$138.67 contribution lifetime value</strong>, before fixed support costs, discounting or changing activity. This is a simplified stationary cohort model, not an observed LTV.</p>
+<p>The 85% production retention assumption is materially more demanding than the 40% testnet D30 experiment target below. Different user populations and incentives make them non-interchangeable; production economics must be rerun using actual fee-paying cohorts before paid acquisition scales.</p>
+<p>At $60 incremental paid CAC, undiscounted contribution LTV/CAC is <strong>2.31×</strong>. The simple no-churn payback of <code>$60 / $20.80 = 2.88</code> ignores churn. Solving <code>$20.80 × (1 − 0.85^n) / (1 − 0.85) = $60</code> gives approximately <strong>3.49 monthly contribution periods</strong>, so cumulative expected contribution first exceeds CAC in the fourth monthly period. To exceed 3× contribution LTV/CAC at the assumed retention and activity, paid CAC must be at most <strong>$46.22</strong>. Do not scale paid acquisition merely because gross-fee LTV looks positive.</p>
+<p>At month 12 in the base case, 3,300 active traders and 85% retention of the previous month's 2,800 imply <strong>920 newly activated traders</strong>. A $12,000 monthly paid acquisition budget at $60 CAC buys at most 200; approximately <strong>720 must arrive through organic or referral distribution</strong>. The variable referral allocation is already deducted in contribution and must not be deducted a second time in CAC calculations. This dependence on organic distribution is an explicit assumption to test. If it fails, reduce the adoption forecast or raise the acquisition budget and recompute burn.</p>
+<h3 id="funding-and-runway">Funding and runway</h3>
+<table>
+<thead>
+<tr>
+<th>Operating capital use</th>
+<th style="text-align: right;">USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prelaunch legal, entity, licensing diligence</td>
+<td style="text-align: right;">160,000</td>
+</tr>
+<tr>
+<td>Security audits and economic review</td>
+<td style="text-align: right;">180,000</td>
+</tr>
+<tr>
+<td>Initial data integration and reliability work</td>
+<td style="text-align: right;">80,000</td>
+</tr>
+<tr>
+<td>Brand, launch setup and operations</td>
+<td style="text-align: right;">30,000</td>
+</tr>
+<tr>
+<td>18 months fixed operating expense</td>
+<td style="text-align: right;">1,620,000</td>
+</tr>
+<tr>
+<td>Contingency</td>
+<td style="text-align: right;">430,000</td>
+</tr>
+<tr>
+<td><strong>Illustrative operating raise</strong></td>
+<td style="text-align: right;"><strong>2,500,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This provides the explicitly budgeted 18 operating months plus prelaunch work and contingency before contribution revenue. It is not a claim of unrestricted 27.8-month runway: prelaunch spending and reserved contingency must be deducted first. Testnet produces no revenue. LP capital and initial insurance reserve must be separately secured and may not be used for salaries or marketing.</p>
+<h2 id="8-acquisition-activation-retention-revenue-reinvestment">8. Acquisition → activation → retention → revenue → reinvestment</h2>
+<h3 id="the-operating-loop">The operating loop</h3>
+<p>Publish a useful session briefing → attract qualified visitors → let them inspect an understandable market → complete the testnet round trip → collect voluntary, structured feedback → fix a measurable friction point → bring successful users back for the next session → measure retained activity → introduce permitted live trading only after gates pass → allocate collected fees to liquidity, risk reserves and operations → reinvest a capped portion of operating contribution in channels that produce retained eligible users.</p>
+<p>This loop should work before any token incentives. A testnet transaction is a usability signal; it is not evidence of willingness to risk real capital or pay a production fee.</p>
+<h3 id="initial-distribution-programs">Initial distribution programs</h3>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Action</th>
+<th>Conversion event</th>
+<th>Weekly owner</th>
+<th>Stop / scale rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session briefing</td>
+<td>Three original English explanations per week with actual source links and clear simulation labels</td>
+<td>Qualified visit → market inspection</td>
+<td>Growth lead + risk editor</td>
+<td>Continue if 4-week engaged return rate exceeds 20%; revise otherwise</td>
+</tr>
+<tr>
+<td>Guided testnet cohort</td>
+<td>10–15 experienced users per cohort; complete deposit/open/close/withdraw</td>
+<td>Successful independent round trip</td>
+<td>Product lead</td>
+<td>Fix the workflow before recruiting more if completion falls below 70%</td>
+</tr>
+<tr>
+<td>Educator distribution</td>
+<td>Approach relevant educators after legal review; disclose fees</td>
+<td>Verified retained eligible trader</td>
+<td>Founder + compliance</td>
+<td>Scale only on net contribution and compliant messaging</td>
+</tr>
+<tr>
+<td>Market-session utility</td>
+<td>Share a calendar/atlas and educational event notes</td>
+<td>Weekly return without trading incentive</td>
+<td>Product + content</td>
+<td>Prioritize if retained visits lead to completed testing</td>
+</tr>
+<tr>
+<td>Developer integration</td>
+<td>Publish contract/API examples after interfaces stabilize</td>
+<td>Independent integration and recurring usage</td>
+<td>Protocol lead</td>
+<td>No integration bounty without working code and a real user case</td>
+</tr>
+</tbody>
+</table>
+<p>Messages and outreach templates can be prepared, but external posting or messaging should be performed only by the project owner or an explicitly authorized operator. No outreach has been sent as part of this plan.</p>
+<h3 id="instrumentation-and-definitions">Instrumentation and definitions</h3>
+<p>Use consent-aware analytics and minimize wallet-level personal data. Events should include <code>market_viewed</code>, <code>wallet_connected</code>, <code>network_ready</code>, <code>faucet_confirmed</code>, <code>approval_confirmed</code>, <code>deposit_confirmed</code>, <code>position_opened</code>, <code>position_closed</code>, <code>withdrawal_confirmed</code>, <code>transaction_failed</code>, <code>stale_quote_seen</code> and <code>feedback_received</code>. These are an implementation backlog, not a claim that analytics are installed.</p>
+<p>Activation on testnet means a confirmed deposit, open, close and withdrawal by the same pseudonymous participant, with session/version and chain ID recorded. Production activation additionally requires a permitted eligible account and a completed fee-bearing round trip. Deduplicate repeated wallets and bot loops when reporting people; do not equate addresses with humans.</p>
+<p>Report D7 and D30 return rates by cohort, completion time, transaction failure reasons, fee-paying retained actives, net revenue retention, trader concentration, real execution slippage, unresolved support incidents and contribution after all variable costs. Exclude self-trading, incentive loops, internal testing and market-maker churn from customer-demand claims.</p>
+<h3 id="reinvestment-policy">Reinvestment policy</h3>
+<p>Honor the fee waterfall first. Keep insurance allocations restricted. Preserve at least 12 months of forecast operating runway before discretionary growth expansion. Propose allocating up to 25% of positive monthly operating contribution to incremental acquisition only when three consecutive mature cohorts meet the contribution-LTV/CAC target and risk limits remain healthy. The remaining contribution offsets burn and funds reliability. Revise the financial model before approving any spend above the fixed $12,000 acquisition envelope.</p>
+<h2 id="9-execution-plan-and-stage-gates">9. Execution plan and stage gates</h2>
+<p>The schedule is measured from the owner's kickoff. Dependencies can extend it; day 90 is a review, not an unconditional mainnet date.</p>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Deliverables</th>
+<th>Owner</th>
+<th>Exit evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Days 1–30</td>
+<td>Secure selected identity; publish testnet-only site after hosting setup; verify deployments; run 30 interviews; resolve highest-severity UX defects; commission legal and data-licensing scopes</td>
+<td>Founder, product, protocol, counsel</td>
+<td>Working round trip, public addresses and receipts, interview report, scoped external proposals</td>
+</tr>
+<tr>
+<td>Days 31–60</td>
+<td>100 qualified testnet participants; at least 70 completed independent round trips; documented session/oracle spec; risk simulation; first independent security review</td>
+<td>Product, risk, protocol</td>
+<td>Cohort report, failure-rate dashboard, written data coverage, prioritized audit findings</td>
+</tr>
+<tr>
+<td>Days 61–90</td>
+<td>Target 400 cumulative qualified testers and 200 independent round trips; at least 40% D30 return for cohorts old enough to measure; finalize production design and financing decision</td>
+<td>Founder, risk, growth</td>
+<td>No unresolved critical defects, evidence-based demand review, costed legal/liquidity path</td>
+</tr>
+<tr>
+<td>After day 90, only if gates pass</td>
+<td>Restricted production beta with small account/OI caps, a controlled user cohort and an incident drill</td>
+<td>Accountable launch committee</td>
+<td>All mainnet gates signed; monitored capped launch; reversible expansion plan</td>
+</tr>
+</tbody>
+</table>
+<p>These are targets, not current metrics. If interview demand is weak, users misunderstand the product, or returning activity depends on rewards, extend or stop the testnet experiment rather than advertise an imminent launch.</p>
+<h3 id="mandatory-production-gates">Mandatory production gates</h3>
+<ol>
+<li>Written legal opinions and a country/customer matrix, legal entity, required permissions and compliant marketing process.</li>
+<li>Executed benchmark and market-data rights for each launched market; production oracle coverage and failure policy verified.</li>
+<li>Independent smart-contract audit plus economic/solvency review; critical and high findings resolved and retested; public disclosure scope approved.</li>
+<li>Real production collateral accepted through a reviewed token integration; bridge/redemption/depeg procedures documented.</li>
+<li>Committed LP and risk capital, stress-calibrated OI limits and enforceable withdrawal/loss-waterfall rules.</li>
+<li>Independent keeper operations, monitoring, incident response, backups, multisig control and emergency drills.</li>
+<li>Successful controlled production end-to-end exercise with tiny authorized amounts, reconciliation and chain-specific verification.</li>
+<li>Evidence of retained qualified demand, an updated model, sufficient operating runway and an accountable signed go/no-go decision.</li>
+</ol>
+<h2 id="10-team-governance-and-accountability">10. Team, governance and accountability</h2>
+<p>Initially assign one accountable person to each function: founder/CEO for capital and strategy; protocol lead for contract delivery; product lead for wallet UX and accessibility; risk lead for market and solvency rules; compliance lead or retained counsel for permitted operations; and growth lead for documented acquisition quality. Small teams may share roles, but the same person should not unilaterally change risk limits, sign treasury transfers and approve their own production release.</p>
+<p>Separate deployer, oracle, treasury and emergency roles. The supplied development key is testnet-only; never publish it, include it in frontend code or reuse it as a production authority. Production should use hardware-backed multisig administration, least privilege, logged parameter changes and appropriate timelocks. An emergency pause policy must specify which exits remain available.</p>
+<p>Weekly: review incidents, cohort behavior, contribution and next experiments. Monthly: reconcile onchain balances to liabilities and reserves, review market/LP concentration, update runway and publish a factual development report. Quarterly: reassess legal scope, licenses, stress limits and market additions.</p>
+<h2 id="11-principal-risks-and-decisions">11. Principal risks and decisions</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Early signal</th>
+<th>Response / decision owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legal or data rights unavailable</td>
+<td>Counsel cannot approve target market; benchmark license unaffordable</td>
+<td>Remove market or stop production launch; founder/counsel</td>
+</tr>
+<tr>
+<td>Thin durable demand</td>
+<td>Low unincentivized D30 return and no willingness to pay</td>
+<td>Narrow customer segment or stop acquisition; product/founder</td>
+</tr>
+<tr>
+<td>Adverse selection and gaps</td>
+<td>Profitable toxic flow, concentrated skew, unhedgeable closures</td>
+<td>Lower OI/leverage, pause new risk, revise architecture; risk lead</td>
+</tr>
+<tr>
+<td>Oracle or sequencer failure</td>
+<td>Stale/disputed feed, failed reports, uptime feed down</td>
+<td>Deterministic pause and incident process; protocol/risk</td>
+</tr>
+<tr>
+<td>Collateral impairment</td>
+<td>Depeg, issuer freeze, impaired redemption</td>
+<td>Apply predeclared limits and halt new exposure; risk/treasury</td>
+</tr>
+<tr>
+<td>Fee compression</td>
+<td>CAC payback worsens; competitors undercut fee</td>
+<td>Reprice and remodel; do not subsidize indefinitely; founder</td>
+</tr>
+<tr>
+<td>Operational key compromise</td>
+<td>Unauthorized role or parameter changes</td>
+<td>Pause appropriate actions, revoke authority, investigate; security lead</td>
+</tr>
+<tr>
+<td>Misleading marketing</td>
+<td>Demo prices called live; affiliation/audit claim lacks evidence</td>
+<td>Remove claim and correct public record; compliance/product</td>
+</tr>
+<tr>
+<td>Liquidity capital unavailable</td>
+<td>No signed risk capital despite usage interest</td>
+<td>Keep testnet; consider RFQ/infrastructure model; founder</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-investment-decision-framework">12. Investment decision framework</h2>
+<p>LATQOR is worth pursuing if transparent global-market execution produces a small but repeatedly active customer base, the legal and data path is viable, and execution can be delivered with positive contribution and solvent risk capacity. It should not advance to real money merely because the prototype looks complete.</p>
+<p>The next financing decision should be based on the testnet cohort report, signed or credibly priced licenses, reviewed production architecture, committed risk capital and an updated bottom-up model. The complete business loop is a measurable operating system with explicit stop conditions; this document does not substitute for running those experiments.</p>
+<h3 id="source-and-assumption-policy">Source and assumption policy</h3>
+<p>Observed competitor and chain facts are documented in <a href="research.md">research.md</a>, checked 18 September 2026. Financial, hiring, acquisition, capital, market-policy and roadmap numbers in this plan are <strong>LATQOR planning assumptions</strong> unless explicitly identified as delivered functionality. No partner, customer, licensing agreement, audit certification or current revenue is invented. Operational release instructions and the remaining owner actions are in <a href="launch-runbook.md">launch-runbook.md</a>.</p></article></body></html>

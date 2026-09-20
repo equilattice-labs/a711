@@ -1,0 +1,1838 @@
+{
+  "network": {
+    "name": "Robinhood Chain Testnet",
+    "chainId": 46630,
+    "chainIdHex": "0xb626",
+    "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
+    "explorerUrl": "https://explorer.testnet.chain.robinhood.com",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "documentation": "https://docs.robinhood.com/chain/connecting",
+    "faucetUrl": "https://faucet.testnet.chain.robinhood.com"
+  },
+  "addresses": {
+    "demoUSD": "0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea",
+    "indexPerpSandbox": "0xaa790F4610a38e925f19fB054E2ADf68cD8de38d"
+  },
+  "abi": {
+    "demoUSD": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "allowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "needed",
+            "type": "uint256"
+          }
+        ],
+        "name": "ERC20InsufficientAllowance",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "needed",
+            "type": "uint256"
+          }
+        ],
+        "name": "ERC20InsufficientBalance",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "approver",
+            "type": "address"
+          }
+        ],
+        "name": "ERC20InvalidApprover",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          }
+        ],
+        "name": "ERC20InvalidReceiver",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
+        ],
+        "name": "ERC20InvalidSender",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "ERC20InvalidSpender",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "availableAt",
+            "type": "uint256"
+          }
+        ],
+        "name": "FaucetCooldown",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "FaucetClaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "FAUCET_AMOUNT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "FAUCET_COOLDOWN",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "internalType": "uint8",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "faucet",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "nextFaucetAt",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "indexPerpSandbox": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "initialOwner",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "EnforcedPause",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ExpectedPause",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientBalance",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidBatch",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidLeverage",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidMarket",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidPrice",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "NotLiquidatable",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "NotPositionOwner",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "OracleStillLive",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnableInvalidOwner",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "OwnableUnauthorizedAccount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PositionUnavailable",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ReentrancyGuardReentrantCall",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          }
+        ],
+        "name": "SafeERC20FailedOperation",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "SlippageExceeded",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "StalePrice",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "updatedAt",
+            "type": "uint256"
+          }
+        ],
+        "name": "DemoPriceUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "Deposited",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "provider",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "LiquidityFunded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "enabled",
+            "type": "bool"
+          }
+        ],
+        "name": "MarketStatusChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferStarted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "Paused",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "int256",
+            "name": "pnl",
+            "type": "int256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "exitPrice",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "payout",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "liquidated",
+            "type": "bool"
+          }
+        ],
+        "name": "PositionClosed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "margin",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "leverage",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "entryPrice",
+            "type": "uint256"
+          }
+        ],
+        "name": "PositionOpened",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "returnedMargin",
+            "type": "uint256"
+          }
+        ],
+        "name": "StalePositionCancelled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "Unpaused",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "Withdrawn",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "LIQUIDATION_LOSS_BPS",
+        "outputs": [
+          {
+            "internalType": "uint16",
+            "name": "",
+            "type": "uint16"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_LEVERAGE",
+        "outputs": [
+          {
+            "internalType": "uint8",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_MARGIN",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_MARKETS_PER_UPDATE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_PRICE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_PRICE_AGE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_SLIPPAGE_BPS",
+        "outputs": [
+          {
+            "internalType": "uint16",
+            "name": "",
+            "type": "uint16"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MIN_MARGIN",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "PRICE_SCALE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "STALE_CANCEL_DELAY",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "accountedCollateral",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "balances",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "cancelStalePosition",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expectedPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "slippageBps",
+            "type": "uint16"
+          }
+        ],
+        "name": "closePosition",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "collateralToken",
+        "outputs": [
+          {
+            "internalType": "contract IERC20",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "deposit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "freeLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "fundLiquidity",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          }
+        ],
+        "name": "getPositionIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "liquidate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "lockedCollateral",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "markets",
+        "outputs": [
+          {
+            "internalType": "uint128",
+            "name": "price",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint64",
+            "name": "updatedAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bool",
+            "name": "enabled",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "nextPositionId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "margin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "leverage",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expectedPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "slippageBps",
+            "type": "uint16"
+          }
+        ],
+        "name": "openPosition",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "paused",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "pendingOwner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "positions",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "margin",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint128",
+            "name": "entryPrice",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint64",
+            "name": "openedAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "leverage",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isOpen",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "previewPnl",
+        "outputs": [
+          {
+            "internalType": "int256",
+            "name": "pnl",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "payout",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "priceFresh",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reservedLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "price",
+            "type": "uint128"
+          }
+        ],
+        "name": "setDemoPrice",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32[]",
+            "name": "marketIds",
+            "type": "bytes32[]"
+          },
+          {
+            "internalType": "uint128[]",
+            "name": "prices",
+            "type": "uint128[]"
+          }
+        ],
+        "name": "setDemoPrices",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "marketId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "enabled",
+            "type": "bool"
+          }
+        ],
+        "name": "setMarketEnabled",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "value",
+            "type": "bool"
+          }
+        ],
+        "name": "setPaused",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalUserCollateral",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "withdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  },
+  "markets": [
+    {
+      "symbol": "MERVAL",
+      "label": "S&P Merval",
+      "country": "Argentina",
+      "region": "Americas",
+      "demoPrice": "2180000.00",
+      "id": "0x4d455256414c0000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "218000000000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "ASX200",
+      "label": "S&P/ASX 200",
+      "country": "Australia",
+      "region": "Asia Pacific",
+      "demoPrice": "8320.40",
+      "id": "0x4153583230300000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "832040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "ATX",
+      "label": "ATX",
+      "country": "Austria",
+      "region": "Europe",
+      "demoPrice": "4350.60",
+      "id": "0x4154580000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "435060000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "BEL20",
+      "label": "BEL 20",
+      "country": "Belgium",
+      "region": "Europe",
+      "demoPrice": "4420.70",
+      "id": "0x42454c3230000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "442070000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "IBOV",
+      "label": "Ibovespa",
+      "country": "Brazil",
+      "region": "Americas",
+      "demoPrice": "138500.00",
+      "id": "0x49424f5600000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "13850000000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "TSX",
+      "label": "S&P/TSX Composite",
+      "country": "Canada",
+      "region": "Americas",
+      "demoPrice": "25980.40",
+      "id": "0x5453580000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "2598040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "IPSA",
+      "label": "S&P IPSA",
+      "country": "Chile",
+      "region": "Americas",
+      "demoPrice": "7920.50",
+      "id": "0x4950534100000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "792050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "SSECOMP",
+      "label": "SSE Composite",
+      "country": "China",
+      "region": "Asia Pacific",
+      "demoPrice": "3420.80",
+      "id": "0x535345434f4d5000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "342080000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "OMXC25",
+      "label": "OMX Copenhagen 25",
+      "country": "Denmark",
+      "region": "Europe",
+      "demoPrice": "1890.30",
+      "id": "0x4f4d584332350000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "189030000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "STOXX50",
+      "label": "EURO STOXX 50",
+      "country": "Europe",
+      "region": "Europe",
+      "demoPrice": "5320.40",
+      "id": "0x53544f5858353000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "532040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "OMXH25",
+      "label": "OMX Helsinki 25",
+      "country": "Finland",
+      "region": "Europe",
+      "demoPrice": "4670.20",
+      "id": "0x4f4d584832350000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "467020000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "CAC40",
+      "label": "CAC 40",
+      "country": "France",
+      "region": "Europe",
+      "demoPrice": "7840.60",
+      "id": "0x4341433430000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "784060000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "DAX",
+      "label": "DAX 40",
+      "country": "Germany",
+      "region": "Europe",
+      "demoPrice": "23470.80",
+      "id": "0x4441580000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "2347080000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "HSI",
+      "label": "Hang Seng Index",
+      "country": "Hong Kong",
+      "region": "Asia Pacific",
+      "demoPrice": "23620.50",
+      "id": "0x4853490000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "2362050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "NIFTY",
+      "label": "Nifty 50",
+      "country": "India",
+      "region": "Asia Pacific",
+      "demoPrice": "24680.40",
+      "id": "0x4e49465459000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "2468040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "JCI",
+      "label": "Jakarta Composite",
+      "country": "Indonesia",
+      "region": "Asia Pacific",
+      "demoPrice": "7180.40",
+      "id": "0x4a43490000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "718040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "ISEQ",
+      "label": "ISEQ All Share",
+      "country": "Ireland",
+      "region": "Europe",
+      "demoPrice": "10680.30",
+      "id": "0x4953455100000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "1068030000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "TA35",
+      "label": "TA-35",
+      "country": "Israel",
+      "region": "Middle East & Africa",
+      "demoPrice": "2830.50",
+      "id": "0x5441333500000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "283050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "FTSEMIB",
+      "label": "FTSE MIB",
+      "country": "Italy",
+      "region": "Europe",
+      "demoPrice": "40280.70",
+      "id": "0x465453454d494200000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "4028070000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "NIKKEI",
+      "label": "Nikkei 225",
+      "country": "Japan",
+      "region": "Asia Pacific",
+      "demoPrice": "37820.50",
+      "id": "0x4e494b4b45490000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "3782050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "KOSPI",
+      "label": "KOSPI Composite",
+      "country": "Korea",
+      "region": "Asia Pacific",
+      "demoPrice": "2810.30",
+      "id": "0x4b4f535049000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "281030000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "IPC",
+      "label": "S&P/BMV IPC",
+      "country": "Mexico",
+      "region": "Americas",
+      "demoPrice": "58420.60",
+      "id": "0x4950430000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "5842060000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "AEX",
+      "label": "AEX Index",
+      "country": "Netherlands",
+      "region": "Europe",
+      "demoPrice": "914.80",
+      "id": "0x4145580000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "91480000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "WIG20",
+      "label": "WIG20",
+      "country": "Poland",
+      "region": "Europe",
+      "demoPrice": "2780.40",
+      "id": "0x5749473230000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "278040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "PSI",
+      "label": "PSI",
+      "country": "Portugal",
+      "region": "Europe",
+      "demoPrice": "7490.60",
+      "id": "0x5053490000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "749060000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "JSEALSI",
+      "label": "JSE All Share",
+      "country": "South Africa",
+      "region": "Middle East & Africa",
+      "demoPrice": "93680.30",
+      "id": "0x4a5345414c534900000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "9368030000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "IBEX35",
+      "label": "IBEX 35",
+      "country": "Spain",
+      "region": "Europe",
+      "demoPrice": "14180.50",
+      "id": "0x4942455833350000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "1418050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "SMI",
+      "label": "Swiss Market Index",
+      "country": "Switzerland",
+      "region": "Europe",
+      "demoPrice": "12120.40",
+      "id": "0x534d490000000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "1212040000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "TAIEX",
+      "label": "Taiwan Weighted Index",
+      "country": "Taiwan",
+      "region": "Asia Pacific",
+      "demoPrice": "22380.60",
+      "id": "0x5441494558000000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "2238060000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "BIST100",
+      "label": "BIST 100",
+      "country": "Turkey",
+      "region": "Europe",
+      "demoPrice": "9680.30",
+      "id": "0x4249535431303000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "968030000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "FTSE100",
+      "label": "FTSE 100",
+      "country": "UK",
+      "region": "Europe",
+      "demoPrice": "8680.50",
+      "id": "0x4654534531303000000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "868050000000",
+      "priceSource": "fixed-synthetic-demo"
+    },
+    {
+      "symbol": "VNINDEX",
+      "label": "VN-Index",
+      "country": "Vietnam",
+      "region": "Asia Pacific",
+      "demoPrice": "1340.70",
+      "id": "0x564e494e44455800000000000000000000000000000000000000000000000000",
+      "priceDecimals": 8,
+      "price": "134070000000",
+      "priceSource": "fixed-synthetic-demo"
+    }
+  ],
+  "maxLeverage": 20,
+  "deployment": {
+    "version": 2,
+    "status": "deployed-testnet",
+    "deployedAt": "2026-09-18T09:50:35.633Z",
+    "explorerUrls": {
+      "demoUSD": "https://explorer.testnet.chain.robinhood.com/address/0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea",
+      "indexPerpSandbox": "https://explorer.testnet.chain.robinhood.com/address/0xaa790F4610a38e925f19fB054E2ADf68cD8de38d"
+    }
+  }
+}

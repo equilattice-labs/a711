@@ -1,0 +1,258 @@
+[
+  {
+    "symbol": "MERVAL",
+    "label": "S&P Merval",
+    "country": "Argentina",
+    "region": "Americas",
+    "demoPrice": "2180000.00",
+    "flag": "ar"
+  },
+  {
+    "symbol": "ASX200",
+    "label": "S&P/ASX 200",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "demoPrice": "8320.40",
+    "flag": "au"
+  },
+  {
+    "symbol": "ATX",
+    "label": "ATX",
+    "country": "Austria",
+    "region": "Europe",
+    "demoPrice": "4350.60",
+    "flag": "at"
+  },
+  {
+    "symbol": "BEL20",
+    "label": "BEL 20",
+    "country": "Belgium",
+    "region": "Europe",
+    "demoPrice": "4420.70",
+    "flag": "be"
+  },
+  {
+    "symbol": "IBOV",
+    "label": "Ibovespa",
+    "country": "Brazil",
+    "region": "Americas",
+    "demoPrice": "138500.00",
+    "flag": "br"
+  },
+  {
+    "symbol": "TSX",
+    "label": "S&P/TSX Composite",
+    "country": "Canada",
+    "region": "Americas",
+    "demoPrice": "25980.40",
+    "flag": "ca"
+  },
+  {
+    "symbol": "IPSA",
+    "label": "S&P IPSA",
+    "country": "Chile",
+    "region": "Americas",
+    "demoPrice": "7920.50",
+    "flag": "cl"
+  },
+  {
+    "symbol": "SSECOMP",
+    "label": "SSE Composite",
+    "country": "China",
+    "region": "Asia Pacific",
+    "demoPrice": "3420.80",
+    "flag": "cn"
+  },
+  {
+    "symbol": "OMXC25",
+    "label": "OMX Copenhagen 25",
+    "country": "Denmark",
+    "region": "Europe",
+    "demoPrice": "1890.30",
+    "flag": "dk"
+  },
+  {
+    "symbol": "STOXX50",
+    "label": "EURO STOXX 50",
+    "country": "Europe",
+    "region": "Europe",
+    "demoPrice": "5320.40",
+    "flag": "eu"
+  },
+  {
+    "symbol": "OMXH25",
+    "label": "OMX Helsinki 25",
+    "country": "Finland",
+    "region": "Europe",
+    "demoPrice": "4670.20",
+    "flag": "fi"
+  },
+  {
+    "symbol": "CAC40",
+    "label": "CAC 40",
+    "country": "France",
+    "region": "Europe",
+    "demoPrice": "7840.60",
+    "flag": "fr"
+  },
+  {
+    "symbol": "DAX",
+    "label": "DAX 40",
+    "country": "Germany",
+    "region": "Europe",
+    "demoPrice": "23470.80",
+    "flag": "de"
+  },
+  {
+    "symbol": "HSI",
+    "label": "Hang Seng Index",
+    "country": "Hong Kong",
+    "region": "Asia Pacific",
+    "demoPrice": "23620.50",
+    "flag": "hk"
+  },
+  {
+    "symbol": "NIFTY",
+    "label": "Nifty 50",
+    "country": "India",
+    "region": "Asia Pacific",
+    "demoPrice": "24680.40",
+    "flag": "in"
+  },
+  {
+    "symbol": "JCI",
+    "label": "Jakarta Composite",
+    "country": "Indonesia",
+    "region": "Asia Pacific",
+    "demoPrice": "7180.40",
+    "flag": "id"
+  },
+  {
+    "symbol": "ISEQ",
+    "label": "ISEQ All Share",
+    "country": "Ireland",
+    "region": "Europe",
+    "demoPrice": "10680.30",
+    "flag": "ie"
+  },
+  {
+    "symbol": "TA35",
+    "label": "TA-35",
+    "country": "Israel",
+    "region": "Middle East & Africa",
+    "demoPrice": "2830.50",
+    "flag": "il"
+  },
+  {
+    "symbol": "FTSEMIB",
+    "label": "FTSE MIB",
+    "country": "Italy",
+    "region": "Europe",
+    "demoPrice": "40280.70",
+    "flag": "it"
+  },
+  {
+    "symbol": "NIKKEI",
+    "label": "Nikkei 225",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "demoPrice": "37820.50",
+    "flag": "jp"
+  },
+  {
+    "symbol": "KOSPI",
+    "label": "KOSPI Composite",
+    "country": "Korea",
+    "region": "Asia Pacific",
+    "demoPrice": "2810.30",
+    "flag": "kr"
+  },
+  {
+    "symbol": "IPC",
+    "label": "S&P/BMV IPC",
+    "country": "Mexico",
+    "region": "Americas",
+    "demoPrice": "58420.60",
+    "flag": "mx"
+  },
+  {
+    "symbol": "AEX",
+    "label": "AEX Index",
+    "country": "Netherlands",
+    "region": "Europe",
+    "demoPrice": "914.80",
+    "flag": "nl"
+  },
+  {
+    "symbol": "WIG20",
+    "label": "WIG20",
+    "country": "Poland",
+    "region": "Europe",
+    "demoPrice": "2780.40",
+    "flag": "pl"
+  },
+  {
+    "symbol": "PSI",
+    "label": "PSI",
+    "country": "Portugal",
+    "region": "Europe",
+    "demoPrice": "7490.60",
+    "flag": "pt"
+  },
+  {
+    "symbol": "JSEALSI",
+    "label": "JSE All Share",
+    "country": "South Africa",
+    "region": "Middle East & Africa",
+    "demoPrice": "93680.30",
+    "flag": "za"
+  },
+  {
+    "symbol": "IBEX35",
+    "label": "IBEX 35",
+    "country": "Spain",
+    "region": "Europe",
+    "demoPrice": "14180.50",
+    "flag": "es"
+  },
+  {
+    "symbol": "SMI",
+    "label": "Swiss Market Index",
+    "country": "Switzerland",
+    "region": "Europe",
+    "demoPrice": "12120.40",
+    "flag": "ch"
+  },
+  {
+    "symbol": "TAIEX",
+    "label": "Taiwan Weighted Index",
+    "country": "Taiwan",
+    "region": "Asia Pacific",
+    "demoPrice": "22380.60",
+    "flag": "tw"
+  },
+  {
+    "symbol": "BIST100",
+    "label": "BIST 100",
+    "country": "Turkey",
+    "region": "Europe",
+    "demoPrice": "9680.30",
+    "flag": "tr"
+  },
+  {
+    "symbol": "FTSE100",
+    "label": "FTSE 100",
+    "country": "UK",
+    "region": "Europe",
+    "demoPrice": "8680.50",
+    "flag": "gb"
+  },
+  {
+    "symbol": "VNINDEX",
+    "label": "VN-Index",
+    "country": "Vietnam",
+    "region": "Asia Pacific",
+    "demoPrice": "1340.70",
+    "flag": "vn"
+  }
+]
