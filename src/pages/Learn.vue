@@ -3,7 +3,7 @@ import { ArrowUpRight, ArrowRight } from 'lucide-vue-next'
 </script>
 <template>
   <div class="learn-page section-shell">
-    <span class="eyebrow">THE LATQOR FIELD GUIDE</span>
+    <span class="eyebrow">THE SENTRAVO FIELD GUIDE</span>
     <h1>Context before conviction.</h1>
     <p class="learn-lead">
       Understand the markets, the mechanics, and what this first release can do.
@@ -116,7 +116,7 @@ import { ArrowUpRight, ArrowRight } from 'lucide-vue-next'
               Public RPCs, the sequencer, wallet providers and explorers may become unavailable.
             </li>
             <li>
-              LATQOR is independent of Robinhood. Network compatibility does not imply affiliation
+              SENTRAVO is independent of Robinhood. Network compatibility does not imply affiliation
               or endorsement.
             </li>
             <li>

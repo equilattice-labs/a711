@@ -15,6 +15,6 @@
         stroke-linejoin="miter"
       />
       <circle cx="56" cy="24" r="3.7" fill="currentColor" /></svg
-    ><span>LATQOR<span class="brand-dot">.</span></span></span
+    ><span>SENTRAVO<span class="brand-dot">.</span></span></span
   >
 </template>

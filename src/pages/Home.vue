@@ -22,8 +22,8 @@ const filtered = computed(() =>
 )
 const faqs = [
   [
-    'What is LATQOR?',
-    'LATQOR is building an onchain home for global equity index perpetuals. Our first release is an experimental Robinhood Chain testnet, with 32 synthetic benchmark markets and a complete test-collateral trading loop.',
+    'What is SENTRAVO?',
+    'SENTRAVO is building an onchain home for global equity index perpetuals. Our first release is an experimental Robinhood Chain testnet, with 32 synthetic benchmark markets and a complete test-collateral trading loop.',
   ],
   [
     'What can I do on the testnet?',
@@ -35,7 +35,7 @@ const faqs = [
   ],
   [
     'Is this a Robinhood product?',
-    'No. LATQOR is an independent project using Robinhood Chain’s public testnet. There is no claimed affiliation, endorsement, investment, or partnership with Robinhood.',
+    'No. SENTRAVO is an independent project using Robinhood Chain’s public testnet. There is no claimed affiliation, endorsement, investment, or partnership with Robinhood.',
   ],
   [
     'What should I know about risk?',
@@ -311,7 +311,7 @@ const faqs = [
       <span class="eyebrow">YOUR NEXT PERSPECTIVE STARTS HERE</span>
       <h2>The world is moving.<br />Where do you stand?</h2>
       <RouterLink class="button primary" to="/trade"
-        >Explore LATQOR <ArrowUpRight :size="19"
+        >Explore SENTRAVO <ArrowUpRight :size="19"
       /></RouterLink>
       <p>Free test tokens. Real onchain exploration.</p>
     </div>

@@ -1,12 +1,12 @@
-# LATQOR — launch and operating runbook
+# SENTRAVO — launch and operating runbook
 
 **Updated:** 18 September 2026.  
 **Release type:** Robinhood Chain Testnet prototype.  
-**Public identity:** LATQOR · `latqor.xyz` · `@latqor`. Availability evidence is time-sensitive; naming checks are not completed registrations.
+**Public identity:** SENTRAVO · ticker `STRV` · `sentravo.xyz` · `@sentravo`. Availability evidence is time-sensitive; naming checks are not completed registrations.
 
 ## 1. What this release is
 
-LATQOR demonstrates a 32-benchmark global-market interface and an onchain settlement loop with 1–20x simulated leverage using worthless dUSD on Robinhood Chain Testnet. It is not a licensed real-money exchange, live benchmark feed or production perpetual engine. A website deployment should retain the testnet and simulated-data disclosures.
+SENTRAVO demonstrates a 32-benchmark global-market interface and an onchain settlement loop with 1–20x simulated leverage using worthless dUSD on Robinhood Chain Testnet. It is not a licensed real-money exchange, live benchmark feed or production perpetual engine. A website deployment should retain the testnet and simulated-data disclosures.
 
 The website is in `website/`. Contract source, executable scripts and authoritative contract behavior are in `contracts/`. Research, business assumptions and launch operations are in `docs/`. Brand and social assets are in `brand/` and `twitter/`.
 
@@ -33,7 +33,7 @@ Never serve the repository root: it contains the private development key. Publis
 
 | Area | Evidence to inspect | Completion standard |
 |---|---|---|
-| Selected name | Delivered brand/availability research | Exact matching `latqor.xyz` and `@latqor`; timestamp and method preserved |
+| Selected name | Delivered brand/availability research | Exact matching `sentravo.xyz` and `@sentravo`; timestamp and method preserved |
 | Domain | Owner's registrar account | Registered to the correct legal owner; renewal and account recovery configured |
 | X identity | Owner's authenticated X account | Handle actually assigned; profile art/bio uploaded; recovery under owner control |
 | Website build | `website/package.json`, build output and QA results | Build succeeds; mobile/desktop routes and key failure states work |
@@ -169,7 +169,7 @@ Read [the contract README](../contracts/README.md) and deployed code before rely
 
 ### Domain
 
-Recheck `latqor.xyz` immediately before purchase through a reputable registrar. The owner should complete purchase under their own account and desired legal registrant details, with renewal, recovery and registrar security configured. A “not found” registry result only means unregistered at check time; it does not reserve the name or settle trademark rights.
+Recheck `sentravo.xyz` immediately before purchase through a reputable registrar. The owner should complete purchase under their own account and desired legal registrant details, with renewal, recovery and registrar security configured. A “not found” registry result only means unregistered at check time; it does not reserve the name or settle trademark rights.
 
 Once a hosting deployment exists, enter the DNS records supplied by that hosting provider for the apex and, if desired, `www`. Use the provider's exact targets instead of copying generic IP addresses. Enable HTTPS, select one canonical hostname and configure redirects. Verify the live site from a second network and check that HTTPS certificates cover the published hostnames.
 
@@ -177,7 +177,7 @@ The repository does not itself purchase a domain, host DNS or provision public h
 
 ### X account
 
-The owner should create or rename an authenticated account to `@latqor`, using the prepared LATQOR display name, bio, avatar and banner. A public missing-profile response alone is not proof of assignability; preserve the stronger naming-check evidence where provided and verify the handle during actual account setup. The final assignment and platform terms are completed by the owner.
+The owner should create or rename an authenticated account to `@sentravo`, using the prepared SENTRAVO display name, bio, avatar and banner. A public missing-profile response alone is not proof of assignability; preserve the stronger naming-check evidence where provided and verify the handle during actual account setup. The final assignment and platform terms are completed by the owner.
 
 Use the prepared English launch posts only after the linked website works publicly. Preserve testnet/simulation language. Do not use partner logos, copied competitor media, fictitious adoption numbers or airdrop promises. Check image crops on both mobile and desktop; publish the JPEG artwork supplied in `twitter/` with accessible alt text.
 

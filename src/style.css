@@ -3063,3 +3063,717 @@ h3 {
 .flag.id {
   background: center / cover no-repeat url(/flags/id.svg);
 }
+
+/* Crypto terminal skin: shared across the home, market and field-guide views. */
+:root {
+  --paper: #080b10;
+  --ink: #edf4f1;
+  --green: #111a22;
+  --lime: #65e8b1;
+  --muted: #8d9da4;
+  --line: #243039;
+  --serif: 'DM Sans Variable', sans-serif;
+  color-scheme: dark;
+}
+html {
+  background: #080b10;
+}
+body {
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(8, 11, 16, 0.95), rgba(8, 11, 16, 0.95)),
+    repeating-linear-gradient(0deg, transparent 0 47px, rgba(110, 153, 164, 0.045) 48px),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(110, 153, 164, 0.045) 48px), #080b10;
+}
+p {
+  color: var(--muted);
+}
+h1,
+h2,
+h3 {
+  color: #f3f8f6;
+  font-family: var(--serif);
+  letter-spacing: -0.035em;
+}
+a {
+  color: inherit;
+}
+::selection {
+  background: #2bca91;
+  color: #06110e;
+}
+.site-header {
+  height: 72px;
+  background: rgba(8, 11, 16, 0.92);
+  border-bottom: 1px solid #243039;
+  backdrop-filter: blur(16px);
+}
+.nav-shell {
+  max-width: 1440px;
+  padding: 0 32px;
+  gap: 42px;
+}
+.brand {
+  color: #effbf7;
+  font-size: 21px;
+  letter-spacing: 0.03em;
+}
+.brand svg {
+  color: #62e3ae;
+}
+.brand-dot {
+  color: #62e3ae;
+}
+.nav-shell nav {
+  gap: 25px;
+  font-size: 12px;
+  color: #92a4aa;
+}
+.nav-shell nav a:hover,
+.nav-shell nav a.router-link-active {
+  color: #e6f7f1;
+}
+.nav-shell nav a:after {
+  background: #55dca6;
+  bottom: -25px;
+}
+.nav-actions {
+  gap: 14px;
+}
+.network-badge {
+  color: #77d8ad;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.network-badge i,
+.tiny-dot {
+  background: #4fe3a3;
+  box-shadow: 0 0 9px #4fe3a399;
+}
+.wallet-button {
+  border-color: #315047;
+  background: #10191b;
+  color: #cce8dd;
+  border-radius: 3px;
+  padding: 10px 13px;
+  font-size: 11px;
+}
+.wallet-button:hover {
+  background: #172923;
+  border-color: #55dca6;
+}
+.button {
+  border-radius: 3px;
+  min-height: 44px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.primary {
+  background: #55dca6;
+  color: #06130f;
+  box-shadow:
+    0 0 0 1px #7af2c2 inset,
+    0 8px 22px #1ac28125;
+}
+.primary:hover {
+  background: #7af2c2;
+}
+.secondary {
+  background: #10171d;
+  border-color: #30404a;
+  color: #cfdddc;
+}
+.secondary:hover {
+  background: #18232a;
+  border-color: #5a7780;
+}
+.lime {
+  background: #55dca6;
+  color: #06130f;
+}
+.text-link {
+  color: #acd2c4;
+  font-size: 12px;
+}
+.text-link:hover {
+  color: #6eeab6;
+}
+.eyebrow {
+  color: #69dbaa;
+  letter-spacing: 0.14em;
+  font-size: 9px;
+}
+.section-shell {
+  max-width: 1380px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.hero {
+  min-height: 600px;
+  padding-top: 62px;
+  padding-bottom: 52px;
+}
+.hero h1 {
+  color: #f1f8f4;
+  font-size: clamp(44px, 5vw, 70px);
+  font-weight: 550;
+  letter-spacing: -0.06em;
+}
+.hero h1 span {
+  color: #6e898c;
+}
+.hero-copy > p {
+  color: #9eafb1;
+  font-size: 14px;
+}
+.hero-note {
+  color: #708287;
+}
+.globe-scene {
+  filter: saturate(1.08);
+}
+.globe-aura {
+  background: radial-gradient(ellipse, #27d39724, transparent 67%);
+}
+.globe-label {
+  background: #101a1df0;
+  border: 1px solid #34504a;
+  box-shadow: 0 10px 28px #0008;
+  color: #cbe7dd;
+}
+.globe-label small {
+  color: #8eaca4;
+}
+.globe-label b {
+  color: #61e1ad;
+}
+.market-pin {
+  border-color: #42d59a;
+}
+.market-pin:after {
+  background: #4fe3a3;
+  box-shadow: 0 0 10px #4fe3a3;
+}
+.globe-caption {
+  color: #78908c;
+}
+.market-ribbon {
+  border-color: #27343d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.ribbon-label {
+  color: #78908e;
+}
+.ribbon-label > svg {
+  color: #54d7a1;
+}
+.ribbon-label small,
+.ribbon-market small {
+  color: #71858a;
+}
+.ribbon-market {
+  border-color: #27343d;
+}
+.ribbon-market:hover {
+  background: #101a20;
+}
+.ribbon-market > strong {
+  color: #e4f2ed;
+}
+.positive {
+  color: #55e0a7 !important;
+}
+.negative {
+  color: #ff827a !important;
+}
+.intro-section,
+.markets-section,
+.how-section {
+  background: transparent;
+}
+.section-kicker {
+  color: #71858b;
+}
+.section-kicker > span:first-child {
+  color: #6edcab;
+}
+.intro-heading p {
+  color: #8fa1a7;
+}
+.benefits article {
+  border-color: #27343d;
+}
+.benefit-icon {
+  color: #54dca4;
+}
+.benefits p,
+.steps p {
+  color: #879aa1;
+}
+.benefit-number {
+  color: #60747b;
+}
+.markets-section {
+  padding-top: 44px;
+}
+.market-toolbar {
+  border-color: #27343d;
+}
+.region-tabs button {
+  color: #7f949a;
+}
+.region-tabs button.active {
+  background: #14342d;
+  color: #75e7b7;
+  border: 1px solid #285c4c;
+}
+.market-table-head {
+  color: #6e838a;
+}
+.market-row {
+  border-color: #25333c;
+}
+.market-row:hover {
+  background: #101a20;
+}
+.market-name strong,
+.market-price {
+  color: #ecf4f0;
+}
+.market-name small,
+.market-name small span,
+.small,
+.markets-foot {
+  color: #72868d;
+}
+.row-arrow {
+  border-color: #2d4249;
+  color: #8cb8ac;
+}
+.row-arrow:hover {
+  border-color: #5bddaa;
+  color: #5bddaa;
+}
+.feature-band {
+  background: #0c171b;
+  border-top: 1px solid #22383a;
+  border-bottom: 1px solid #22383a;
+}
+.feature-band:after {
+  background: radial-gradient(ellipse at 95% 95%, #32dcaa12, transparent 50%);
+}
+.feature-copy .eyebrow {
+  color: #68dca9;
+}
+.feature-copy > p {
+  color: #91a6a9;
+}
+.feature-footnote {
+  color: #70908a;
+}
+.position-illustration {
+  background: #111d21aa;
+  border-color: #315449;
+  box-shadow: 8px 15px 60px #0007;
+}
+.mini-terminal-top {
+  border-color: #2a4545;
+  color: #add1c2;
+}
+.mini-terminal-top > span:last-child,
+.mini-market small,
+.mini-position-stats span,
+.mini-terminal-bottom {
+  color: #799995;
+}
+.long-badge {
+  color: #61e2ad;
+  background: #1b8b641c;
+  border-color: #2b8060;
+}
+.how-section {
+  border-top: 1px solid #24313a;
+}
+.steps article > span {
+  color: #6bdbab;
+}
+.step-line {
+  background: #2a3b42;
+}
+.step-graphic {
+  background: #111c22;
+  border: 1px solid #273b42;
+}
+.step-chip {
+  background: #18282d;
+  border-color: #36545a;
+  color: #b5d8cc;
+}
+.faq-section {
+  border-top-color: #26343b;
+}
+.faq-list button {
+  border-color: #27343d;
+  color: #d4e2df;
+}
+.faq-list button:hover {
+  color: #6ee8b5;
+}
+.faq-list p {
+  color: #87999f;
+}
+.final-cta {
+  background: #10221f;
+  border: 1px solid #2f594b;
+}
+.final-cta p {
+  color: #9ab6ae;
+}
+.cta-orbit {
+  opacity: 0.8;
+  filter: saturate(1.25);
+}
+.site-footer {
+  border-top: 1px solid #24313a;
+  background: #070a0e;
+}
+.footer-top {
+  border-bottom-color: #24313a;
+}
+.footer-top p,
+.footer-bottom {
+  color: #6c8087;
+}
+.modal-backdrop {
+  background: #020607cc;
+  backdrop-filter: blur(8px);
+}
+.wallet-modal {
+  background: #0e171b;
+  border: 1px solid #315047;
+  box-shadow: 0 25px 70px #000b;
+}
+.wallet-modal p {
+  color: #91a8a6;
+}
+.provider-button {
+  background: #132025;
+  border-color: #30494a;
+  color: #d1e7de;
+}
+.provider-button:hover {
+  background: #19342e;
+  border-color: #56dba6;
+}
+.wallet-empty {
+  background: #101d21;
+  border-color: #2a4145;
+}
+.success-line {
+  color: #5fe2ac !important;
+}
+.error {
+  color: #ff817a !important;
+}
+
+/* Trade terminal */
+.terminal {
+  background: transparent;
+  padding-top: 34px;
+}
+.terminal-heading {
+  border-bottom-color: #273640;
+}
+.terminal-heading h1 {
+  color: #f0f8f5;
+  letter-spacing: -0.04em;
+}
+.terminal-heading p {
+  color: #82979b;
+}
+.testnet-badge {
+  background: #173d32;
+  border-color: #2d785d;
+  color: #6ce6b2;
+}
+.terminal-notice {
+  background: #111c22;
+  border-color: #2a414a;
+  color: #a6b6b5;
+}
+.terminal-notice.notice-warning {
+  background: #271e18;
+  border-color: #684b2d;
+  color: #e7bf8a;
+}
+.trade-grid {
+  border: 1px solid #263640;
+  background: #0c1217;
+}
+.market-sidebar {
+  background: #0d151b;
+  border-color: #263640;
+}
+.market-sidebar .eyebrow {
+  color: #6fdbab;
+}
+.market-sidebar button {
+  color: #9bb0b2;
+  border-color: transparent;
+}
+.market-sidebar button:hover,
+.market-sidebar button.active {
+  background: #132a29;
+  border-color: #2b6856;
+  color: #d9f3e9;
+}
+.market-sidebar button small {
+  color: #6c8185;
+}
+.market-selector-controls input,
+.market-selector-controls select {
+  background: #111b21;
+  border-color: #2b4147;
+  color: #c4d8d3;
+}
+.chart-panel,
+.ticket {
+  background: #0c1419;
+}
+.chart-panel {
+  border-color: #263640;
+}
+.chart-heading {
+  border-bottom-color: #263640;
+}
+.chart-heading h2,
+.chart-price {
+  color: #edf6f2;
+}
+.chart-status {
+  color: #6fdcaf;
+  background: #12372c;
+  border-color: #285d4b;
+}
+.chart-meta,
+.chart-hours,
+.chart-disclosure {
+  color: #72878c;
+}
+.chart-grid-line {
+  stroke: #294047;
+}
+.chart-svg path {
+  stroke: #58ddb0;
+  filter: drop-shadow(0 0 4px #58ddb077);
+}
+.chart-svg circle {
+  fill: #ff837b;
+  stroke: #0c1419;
+}
+.contract-health {
+  color: #65d9aa;
+  background: #102a25;
+  border: 1px solid #245b4b;
+}
+.contract-health.stale {
+  color: #efb36f;
+  background: #2a2017;
+  border-color: #694a2b;
+}
+.ticket {
+  border-color: #263640;
+}
+.ticket > h2 {
+  color: #e8f4f0;
+}
+.ticket > p {
+  color: #83979c;
+}
+.side-toggle {
+  background: #111d22;
+  border-color: #2a4046;
+}
+.side-toggle button {
+  color: #80969a;
+}
+.side-toggle button.active {
+  background: #174536;
+  color: #79edbb;
+}
+.field-label,
+.summary-row > span,
+.range-labels,
+.number-field span {
+  color: #7e9398;
+}
+.number-field input,
+.ticket select {
+  background: #111c21;
+  border-color: #2d444b;
+  color: #e3f1ed;
+}
+.number-field input:focus,
+.ticket select:focus {
+  border-color: #55dca6;
+}
+.leverage-range {
+  accent-color: #55dca6;
+}
+.order-summary {
+  background: #101b20;
+  border-color: #2a4148;
+}
+.summary-row {
+  border-color: #263840;
+}
+.summary-row strong {
+  color: #d7e9e4;
+}
+.terms-check,
+.ticket-risk {
+  color: #758a90;
+}
+.portfolio {
+  border-color: #263640;
+  background: #0b1318;
+}
+.portfolio-header {
+  border-bottom-color: #263640;
+  color: #a6c1b7;
+}
+.balance-grid {
+  border-bottom-color: #263640;
+}
+.balance-grid > div {
+  border-color: #263640;
+}
+.balance-grid span,
+.balance-grid small {
+  color: #71868b;
+}
+.balance-grid strong {
+  color: #e1efeb;
+}
+.collateral-actions {
+  border-bottom-color: #263640;
+}
+.positions {
+  border-top-color: #263640;
+}
+.position-row {
+  border-color: #263640;
+}
+.position-row strong {
+  color: #d9eae5;
+}
+.empty-positions {
+  background: #101b20;
+  border-color: #2a4148;
+  color: #99b1ad;
+}
+.contract-links {
+  color: #739096;
+}
+.contract-links a {
+  color: #6fe5b2;
+}
+
+/* Field guide */
+.learn-page {
+  padding-top: 76px;
+}
+.learn-page > h1 {
+  color: #eef7f3;
+}
+.learn-lead {
+  color: #8ea4a5;
+}
+.learn-layout aside {
+  border-color: #263640;
+}
+.learn-layout aside a {
+  color: #7c9296;
+}
+.learn-layout aside a:hover,
+.learn-layout aside a.router-link-active {
+  color: #65e2ad;
+}
+.learn-content section {
+  border-top-color: #263640;
+}
+.learn-content h2 {
+  color: #e8f4f0;
+}
+.learn-content p,
+.learn-content li {
+  color: #879da1;
+}
+.learn-content strong {
+  color: #d9ebe5;
+}
+.learn-content a {
+  color: #68dfaf;
+}
+.info-panel {
+  background: #101b20;
+  border-color: #2b4248;
+}
+.info-panel strong {
+  color: #6ce5b1;
+}
+.info-panel code {
+  background: #0a1115;
+  border-color: #2b4248;
+  color: #abd5c5;
+}
+.learn-content .info-panel p {
+  color: #8da4a5;
+}
+@media (max-width: 600px) {
+  .site-header {
+    height: 66px;
+  }
+  .nav-shell {
+    padding: 0 18px;
+  }
+  .nav-shell nav {
+    top: 66px;
+    background: #0a1015;
+    border-color: #273640;
+  }
+  .section-shell {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero {
+    padding-top: 38px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 10vw, 58px);
+  }
+  .network-badge {
+    display: none;
+  }
+  .market-ribbon {
+    background: #0c1419;
+    border-top-color: #263640;
+    border-bottom-color: #263640;
+  }
+  .market-row:hover {
+    background: #101c21;
+  }
+  .feature-inner {
+    padding-top: 44px;
+  }
+  .terminal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .trade-grid {
+    border-left: 0;
+    border-right: 0;
+  }
+}
