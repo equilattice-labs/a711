@@ -1,15 +1,15 @@
-# SENTRAVO
+# ORVECTA
 
 ## Global market conviction. One onchain workspace.
 
 **Business plan · 18 September 2026 · Version 1.0**  
 **Audience:** prospective founders, investors, operators, liquidity providers and technical reviewers.  
-**Selected identity:** SENTRAVO · `sentravo.xyz` · `@sentravo`  
-**Name:** sentry + traverse; pronounced “sen-TRA-vo.” The selected domain and handle are a naming recommendation until the owner completes registration. See the naming evidence delivered with the project for the time and limits of availability checks.
+**Selected identity:** ORVECTA · `orvecta.xyz` · `@orvecta`  
+**Name:** orbit + vector; pronounced “or-VEK-ta.” The selected domain and handle are a naming recommendation until the owner completes registration. See the naming evidence delivered with the project for the time and limits of availability checks.
 
 ### Executive investment thesis
 
-SENTRAVO is an independent project developing an onchain venue for global stock-benchmark perpetual futures on Robinhood Chain. Its wedge is a clear, session-aware trading experience: understand the market, see whether its reference session is open, inspect the execution and liquidation rules, and manage exposure through a single wallet interface.
+ORVECTA is an independent project developing an onchain venue for global stock-benchmark perpetual futures on Robinhood Chain. Its wedge is a clear, session-aware trading experience: understand the market, see whether its reference session is open, inspect the execution and liquidation rules, and manage exposure through a single wallet interface. The current dUSD contract at the documented testnet address is immutable historical infrastructure whose on-chain name remains `LATQOR Demo USD`; the current source and interface use ORVECTA presentation copy without claiming that the deployed token was renamed.
 
 The long-term ambition is a programmable global macro trading layer. The testnet product covers **32 synthetic benchmark markets with up to 20x leverage**, giving users the reference project's breadth of market discovery and simulated exposure. A future licensed real-money launch has a separate, deliberately staged scope: prove that a small group of eligible, experienced traders repeatedly uses three well-specified benchmark markets, with reliable data, controlled leverage and solvent settlement. Production expansion follows evidence about demand, execution quality and risk capacity.
 
@@ -25,7 +25,7 @@ An illustrative **$2.5 million operating capital raise** would fund $450,000 of 
 
 An experienced onchain trader develops a view on Japanese equities after an earnings cycle, or wants to compare Japanese, German and UK equity risk. Today that trader may face fragmented accounts, inconsistent collateral, unfamiliar market schedules and uncertainty about what an onchain quote actually represents outside the underlying exchange's session.
 
-SENTRAVO's proposed job is: **“Let me express and manage a transparent benchmark view from my wallet, with clear market hours, execution conditions and collateral accounting.”** Convenience matters, but knowing when a price can be trusted is the defining product requirement.
+ORVECTA's proposed job is: **“Let me express and manage a transparent benchmark view from my wallet, with clear market hours, execution conditions and collateral accounting.”** Convenience matters, but knowing when a price can be trusted is the defining product requirement.
 
 The product offers derivative exposure to a benchmark. It does not confer ownership of underlying shares, voting rights, dividends or a claim on an ETF. Benchmark names and index values may be subject to licensing. Local index points are a quotation convention; settlement currency and the return calculation must be stated separately.
 
@@ -50,16 +50,16 @@ Conduct 30 structured interviews across the first two segments. Ask about the la
 
 The addressable market cannot be inferred from total equity capitalization. Equity ownership is not perpetual trading demand, and trading volume is not revenue.
 
-For a first operating target, suppose SENTRAVO could eventually serve **10,000 eligible active traders**, each executing **$80,000 per month**. That would produce $800 million in monthly notional, $480,000 in monthly gross execution fees at 6 basis points, and $208,000 in monthly contribution at 2.6 basis points. These are planning assumptions; neither audience size nor trading frequency has been validated. Revenue remains sensitive to fee competition, concentration in a few traders, and the cost of servicing volatile flow.
+For a first operating target, suppose ORVECTA could eventually serve **10,000 eligible active traders**, each executing **$80,000 per month**. That would produce $800 million in monthly notional, $480,000 in monthly gross execution fees at 6 basis points, and $208,000 in monthly contribution at 2.6 basis points. These are planning assumptions; neither audience size nor trading frequency has been validated. Revenue remains sensitive to fee competition, concentration in a few traders, and the cost of servicing volatile flow.
 
 The base first-year exit target of 3,300 active traders represents 33% of this deliberately small serviceable target, not a share of the global stock market. It is still ambitious. A more credible near-term milestone is 100 independently retained eligible traders with positive contribution and no material operational incidents.
 
 ### Competitive reference points
 
-| Reference | Observed strength | Implication for SENTRAVO |
+| Reference | Observed strength | Implication for ORVECTA |
 |---|---|---|
 | Perpdex / PerpIndex | Latest 18 September snapshot lists 32 benchmarks, one USDG balance, local index points and orders executed at the next live reference price | Category validation and an interaction reference; breadth alone is not defensible |
-| Hyperliquid | Broad asset coverage, strong trading destination, developer distribution and execution-focused product story | Competing on generic “trade anything” is weak; SENTRAVO needs a specific workflow and transparent market policy |
+| Hyperliquid | Broad asset coverage, strong trading destination, developer distribution and execution-focused product story | Competing on generic “trade anything” is weak; ORVECTA needs a specific workflow and transparent market policy |
 | Jupiter | Product-first navigation and direct wallet-to-trade experience | Minimize friction between discovery and a comprehensible ticket |
 | Aave | Clear product segmentation, visible risk information and developer tools | Explain product maturity and risk with the same care as benefits |
 | Ethena | Product mechanism, transparency dashboards and methodology disclosures | Back important assertions with inspectable data and definitions |
@@ -73,7 +73,7 @@ This is a focused public-site review, not a comprehensive market-share study or 
 3. **Risk and execution history:** measurable slippage, oracle uptime, independently reviewed reserves and disciplined market expansion.
 4. **Integration quality:** a stable interface for trading tools, reporting and account abstraction after core execution is proven.
 
-No defensibility is created merely by deploying to Robinhood Chain or by reproducing another interface. All SENTRAVO branding, copy, illustrations and code should be original; competitor trademarks and proprietary assets are not part of the product.
+No defensibility is created merely by deploying to Robinhood Chain or by reproducing another interface. All ORVECTA branding, copy, illustrations and code should be original; competitor trademarks and proprietary assets are not part of the product.
 
 ## 3. Product scope: delivered, next and production
 
@@ -140,7 +140,7 @@ For an initial production implementation, it may be safer to disable order creat
 
 ### Oracle architecture
 
-Robinhood's official documentation describes Chainlink feeds and Data Streams, but it does not establish that all intended national-index products are licensed and available to SENTRAVO. Obtain written market-by-market coverage, redistribution and derivative-use rights before using a provider name in marketing.
+Robinhood's official documentation describes Chainlink feeds and Data Streams, but it does not establish that all intended national-index products are licensed and available to ORVECTA. Obtain written market-by-market coverage, redistribution and derivative-use rights before using a provider name in marketing.
 
 The production adapter should verify positive values, decimals, sequence/replay constraints, timestamp freshness, signed-report validity, per-market deviation limits and L2 sequencer health. Validate a licensed secondary reference; disagreement beyond a published threshold pauses execution rather than silently switching an economic benchmark. A staleness threshold must reflect the actual feed heartbeat and market session, not an arbitrary 15-minute prototype setting.
 
@@ -182,7 +182,7 @@ Before production access, adopt a written country and customer-type matrix. Defa
 
 Required commercial agreements include benchmark trademark/derivative licensing, real-time and historical data use, public display and redistribution rights, hedge venue and market-maker terms, oracle and infrastructure service levels, and collateral issuance/redemption exposure. A paid API key alone may not authorize redistribution or derivative creation. Do not claim partnerships with Robinhood, Chainlink, benchmark administrators or liquidity providers without a signed and publishable basis.
 
-Use an original visual identity and independently written software. The website should say “Built on Robinhood Chain” only as a factual infrastructure description and identify SENTRAVO as independent. All public claims about audits, reserves, uptime and deployment require dated evidence. No token price, return, guaranteed yield or unannounced airdrop is part of the launch message.
+Use an original visual identity and independently written software. The website should say “Built on Robinhood Chain” only as a factual infrastructure description and identify ORVECTA as independent. All public claims about audits, reserves, uptime and deployment require dated evidence. No token price, return, guaranteed yield or unannounced airdrop is part of the launch message.
 
 ## 7. Business model and financial assumptions
 
@@ -340,10 +340,10 @@ Weekly: review incidents, cohort behavior, contribution and next experiments. Mo
 
 ## 12. Investment decision framework
 
-SENTRAVO is worth pursuing if transparent global-market execution produces a small but repeatedly active customer base, the legal and data path is viable, and execution can be delivered with positive contribution and solvent risk capacity. It should not advance to real money merely because the prototype looks complete.
+ORVECTA is worth pursuing if transparent global-market execution produces a small but repeatedly active customer base, the legal and data path is viable, and execution can be delivered with positive contribution and solvent risk capacity. It should not advance to real money merely because the prototype looks complete.
 
 The next financing decision should be based on the testnet cohort report, signed or credibly priced licenses, reviewed production architecture, committed risk capital and an updated bottom-up model. The complete business loop is a measurable operating system with explicit stop conditions; this document does not substitute for running those experiments.
 
 ### Source and assumption policy
 
-Observed competitor and chain facts are documented in [research.md](research.md), checked 18 September 2026. Financial, hiring, acquisition, capital, market-policy and roadmap numbers in this plan are **SENTRAVO planning assumptions** unless explicitly identified as delivered functionality. No partner, customer, licensing agreement, audit certification or current revenue is invented. Operational release instructions and the remaining owner actions are in [launch-runbook.md](launch-runbook.md).
+Observed competitor and chain facts are documented in [research.md](research.md), checked 18 September 2026. Financial, hiring, acquisition, capital, market-policy and roadmap numbers in this plan are **ORVECTA planning assumptions** unless explicitly identified as delivered functionality. No partner, customer, licensing agreement, audit certification or current revenue is invented. Operational release instructions and the remaining owner actions are in [launch-runbook.md](launch-runbook.md).

@@ -46,7 +46,7 @@ const dots = computed(() => {
         </radialGradient>
         <clipPath id="clip"><circle cx="300" cy="300" r="238" /></clipPath>
         <radialGradient id="shine" cx="26%" cy="20%">
-          <stop stop-color="#d8ec9c" stop-opacity=".18" />
+          <stop stop-color="#55dca6" stop-opacity=".18" />
           <stop offset="1" stop-color="#fff" stop-opacity="0" />
         </radialGradient>
       </defs>
@@ -74,16 +74,16 @@ const dots = computed(() => {
         />
         <path d="M62 300h476M300 62v476" />
       </g>
-      <g fill="#d2e4a9">
+      <g fill="#9be8c9">
         <circle v-for="(d, i) in dots" :key="i" :cx="d.x" :cy="d.y" :r="d.r" :opacity="d.o" />
       </g>
       <circle cx="300" cy="300" r="238" fill="url(#shine)" />
-      <g fill="#d6ff70">
+      <g fill="#55dca6">
         <circle cx="283" cy="135" r="5" />
         <circle cx="437" cy="208" r="5" />
         <circle cx="122" cy="205" r="5" />
       </g>
-      <g fill="none" stroke="#d6ff70" stroke-opacity=".7">
+      <g fill="none" stroke="#55dca6" stroke-opacity=".7">
         <path d="M122 205Q230 20 437 208" />
         <path d="M283 135Q373 100 437 208" />
         <circle class="pulse-ring" cx="283" cy="135" r="12" />
@@ -108,6 +108,6 @@ const dots = computed(() => {
         FRANKFURT<small>DAX 40 <b>↘</b></small>
       </div>
     </div>
-    <span class="globe-caption">A GLOBAL PERSPECTIVE. AN ONCHAIN FUTURE.</span>
+    <span class="globe-caption">GLOBAL BENCHMARKS / SYNTHETIC TESTNET</span>
   </div>
 </template>

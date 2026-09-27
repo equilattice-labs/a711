@@ -2,19 +2,26 @@
   <span class="brand"
     ><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
       <path
-        d="M51.2 17.4A24 24 0 1 0 55.8 35.2"
+        d="M52 18A24 24 0 1 0 51 42"
         stroke="currentColor"
-        stroke-width="5.7"
+        stroke-width="5.2"
         stroke-linecap="round"
       />
       <path
-        d="M26 14V41H45"
+        d="M20 17L32 47L44 17"
         stroke="currentColor"
-        stroke-width="6.5"
-        stroke-linecap="square"
-        stroke-linejoin="miter"
+        stroke-width="5.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
-      <circle cx="56" cy="24" r="3.7" fill="currentColor" /></svg
-    ><span>SENTRAVO<span class="brand-dot">.</span></span></span
+      <path
+        d="M15 37Q31 23 49 29"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        opacity=".72"
+      />
+      <circle cx="54" cy="18" r="3.7" fill="currentColor" /></svg
+    ><span>ORVECTA<span class="brand-dot">.</span></span></span
   >
 </template>

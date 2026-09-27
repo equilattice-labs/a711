@@ -62,7 +62,7 @@ async function verify() {
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-shell">
-      <RouterLink to="/" aria-label="SENTRAVO home"><Brand /></RouterLink>
+      <RouterLink to="/" aria-label="ORVECTA home"><Brand /></RouterLink>
       <nav :class="{ expanded: menu }" aria-label="Main navigation">
         <RouterLink to="/trade">Markets</RouterLink><RouterLink to="/#how">How it works</RouterLink
         ><RouterLink to="/learn">Learn <ArrowUpRight :size="13" /></RouterLink>
@@ -97,7 +97,7 @@ async function verify() {
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {{ new Date().getFullYear() }} SENTRAVO</span
+      <span>© {{ new Date().getFullYear() }} ORVECTA</span
       ><span>Independent project. Not affiliated with Robinhood.</span
       ><RouterLink to="/learn#risk">Testnet & risk disclosure</RouterLink>
     </div>
