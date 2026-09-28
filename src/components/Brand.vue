@@ -2,26 +2,12 @@
   <span class="brand"
     ><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
       <path
-        d="M52 18A24 24 0 1 0 51 42"
-        stroke="currentColor"
-        stroke-width="5.2"
-        stroke-linecap="round"
+        d="M32 4a28 28 0 1 0 0 56a28 28 0 1 0 0-56z M32 14a18 18 0 1 1 0 36a18 18 0 1 1 0-36z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
       />
-      <path
-        d="M20 17L32 47L44 17"
-        stroke="currentColor"
-        stroke-width="5.7"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M15 37Q31 23 49 29"
-        stroke="currentColor"
-        stroke-width="2.4"
-        stroke-linecap="round"
-        opacity=".72"
-      />
-      <circle cx="54" cy="18" r="3.7" fill="currentColor" /></svg
-    ><span>ORVECTA<span class="brand-dot">.</span></span></span
+      <path d="M39 37L61 59L54 64L32 42Z" fill="currentColor" /></svg
+    ><span>QUIVANTA<span class="brand-dot">.</span></span></span
   >
 </template>

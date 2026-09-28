@@ -2648,7 +2648,420 @@ h3 {
   }
 }
 
-/* ORVECTA market dashboard */
+/* Quivanta wallet-first market board */
+.app-home {
+  padding-top: 42px;
+  padding-bottom: 26px;
+}
+.home-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #263640;
+}
+.home-toolbar h1 {
+  margin: 14px 0 8px;
+  font-size: clamp(34px, 4vw, 56px);
+  letter-spacing: -0.055em;
+}
+.home-lead {
+  max-width: 560px;
+  margin: 0;
+  color: #8ea2a5;
+  font-size: 14px;
+}
+.home-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.chain-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid #2b4248;
+  background: #101a20;
+  color: #91aaa5;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.chain-chip i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #efb36f;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.55fr 0.82fr;
+  gap: 1px;
+  margin-top: 22px;
+  border: 1px solid #263640;
+  background: #263640;
+}
+.home-card {
+  min-height: 300px;
+  padding: 20px;
+  background: #0c1419;
+}
+.card-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #82979d;
+  font:
+    600 10px/1.2 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  letter-spacing: 0.12em;
+}
+.card-label svg {
+  color: #65e8b1;
+}
+.card-label a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #65e8b1;
+  font:
+    500 11px/1.2 'DM Sans Variable',
+    sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.account-state {
+  display: block;
+  margin: 28px 0 8px;
+  color: #edf6f2;
+  font-size: 21px;
+}
+.account-card p {
+  min-height: 63px;
+  margin: 0 0 20px;
+  color: #84999e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.button.full {
+  width: 100%;
+  gap: 8px;
+}
+.account-meta {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px 10px;
+  margin-top: 23px;
+  padding-top: 15px;
+  border-top: 1px solid #263640;
+}
+.account-meta span,
+.account-meta small {
+  color: #71868b;
+  font:
+    9px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  letter-spacing: 0.08em;
+}
+.account-meta b {
+  color: #d9eae5;
+  font:
+    600 14px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+.account-meta small {
+  grid-column: 1 / -1;
+  letter-spacing: 0;
+}
+.watch-card {
+  min-width: 0;
+}
+.home-market-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 92px 55px 76px;
+  gap: 10px;
+  align-items: center;
+  min-height: 50px;
+  border-top: 1px solid #263640;
+}
+.home-market-row:first-of-type {
+  margin-top: 15px;
+}
+.home-market-row:hover {
+  background: #101d22;
+}
+.home-market-row .market-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.home-market-row .market-name > span:last-child {
+  min-width: 0;
+}
+.home-market-row b {
+  display: block;
+  overflow: hidden;
+  color: #dcebe7;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.home-market-row small {
+  display: block;
+  margin-top: 3px;
+  color: #71868b;
+  font-size: 9px;
+}
+.home-market-row .market-value,
+.home-market-row > span:not(.market-name) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.home-market-row > span:not(.market-name) {
+  font-size: 11px;
+}
+.home-market-row svg {
+  width: 76px;
+  height: 28px;
+}
+.table-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0 0;
+  color: #71868b;
+  font-size: 10px;
+}
+.table-note svg {
+  color: #65e8b1;
+}
+.steps-card ol {
+  display: grid;
+  gap: 17px;
+  padding: 0;
+  margin: 29px 0 23px;
+  list-style: none;
+}
+.steps-card li {
+  display: flex;
+  gap: 11px;
+  color: #dcebe7;
+  font-size: 12px;
+}
+.steps-card li > b {
+  color: #65e8b1;
+  font:
+    600 10px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+.steps-card li span {
+  display: block;
+}
+.steps-card li small {
+  display: block;
+  margin-top: 4px;
+  color: #71868b;
+  font-size: 9px;
+}
+.market-board {
+  padding-top: 68px;
+  padding-bottom: 70px;
+}
+.board-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+.board-header h2 {
+  margin: 13px 0 0;
+  font-size: 40px;
+}
+.market-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 30px 0 16px;
+  padding: 13px 0;
+  border-top: 1px solid #263640;
+  border-bottom: 1px solid #263640;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 220px;
+  padding: 9px 11px;
+  border: 1px solid #2b4147;
+  background: #101a20;
+  color: #80969a;
+}
+.search-field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #d9eae5;
+  font-size: 11px;
+}
+.search-field input::placeholder {
+  color: #71868b;
+}
+.market-table.compact .market-row {
+  min-height: 64px;
+}
+.market-table.compact .market-table-head,
+.market-table.compact .market-row {
+  grid-template-columns: minmax(210px, 1.5fr) 1fr 0.65fr 105px 34px;
+}
+.empty-market-state {
+  margin: 24px 0;
+  padding: 22px;
+  border: 1px dashed #2b4248;
+  color: #93a6a7;
+  text-align: center;
+  font-size: 12px;
+}
+.board-disclosure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: #71868b;
+  font-size: 10px;
+}
+.home-footer-band {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 62px;
+  padding-bottom: 90px;
+  border-top: 1px solid #263640;
+}
+.home-footer-band h2 {
+  margin: 13px 0 8px;
+  font-size: 39px;
+}
+.home-footer-band p {
+  max-width: 500px;
+  margin: 0;
+  color: #879da1;
+}
+.home-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid #263640;
+  background: #263640;
+}
+.home-feature-list span {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 120px;
+  padding: 16px;
+  background: #101a20;
+  color: #dcebe7;
+  font-size: 11px;
+}
+.home-feature-list svg {
+  color: #65e8b1;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr 1.35fr;
+  }
+  .steps-card {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+  .home-footer-band {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 650px) {
+  .app-home {
+    padding-top: 30px;
+  }
+  .home-toolbar,
+  .board-header,
+  .market-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .home-toolbar-actions {
+    justify-content: flex-start;
+  }
+  .home-grid {
+    display: block;
+  }
+  .home-card {
+    min-height: 0;
+    border-bottom: 1px solid #263640;
+  }
+  .home-card:last-child {
+    border-bottom: 0;
+  }
+  .home-market-row {
+    grid-template-columns: minmax(120px, 1fr) 75px 50px;
+  }
+  .home-market-row svg {
+    display: none;
+  }
+  .search-field {
+    min-width: 0;
+  }
+  .market-table.compact .market-table-head,
+  .market-table.compact .market-row {
+    grid-template-columns: minmax(150px, 1fr) 82px 54px 30px;
+  }
+  .market-table.compact .market-table-head span:nth-child(4),
+  .market-table.compact .market-row svg {
+    display: none;
+  }
+  .home-footer-band h2 {
+    font-size: 31px;
+  }
+  .home-feature-list {
+    grid-template-columns: 1fr;
+  }
+  .home-feature-list span {
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* QUIVANTA market dashboard */
 .dashboard-hero {
   padding-top: 52px;
   padding-bottom: 34px;
@@ -4216,5 +4629,28 @@ a {
   .trade-grid {
     border-left: 0;
     border-right: 0;
+  }
+}
+
+/* Final app surface tokens: keep the shell quiet and let market state carry the hierarchy. */
+body {
+  background: #080b10;
+}
+.button:hover {
+  transform: none;
+}
+.button:active {
+  transform: translateY(1px);
+}
+.site-header {
+  background: #080b10;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

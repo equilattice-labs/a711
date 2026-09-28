@@ -12,12 +12,12 @@ const router = createRouter({
     {
       path: '/trade',
       component: () => import('./pages/Trade.vue'),
-      meta: { title: 'Global markets · Testnet terminal — ORVECTA' },
+      meta: { title: 'Global markets · Testnet terminal — QUIVANTA' },
     },
     {
       path: '/learn',
       component: () => import('./pages/Learn.vue'),
-      meta: { title: 'Field guide · Mechanics & risk — ORVECTA' },
+      meta: { title: 'Field guide · Mechanics & risk — QUIVANTA' },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
@@ -26,6 +26,6 @@ const router = createRouter({
   },
 })
 router.afterEach((to) => {
-  document.title = to.meta.title || 'ORVECTA — Track the move. Trade the view.'
+  document.title = to.meta.title || 'QUIVANTA — Track the move. Trade the view.'
 })
 createApp(App).use(router).mount('#app')

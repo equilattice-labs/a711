@@ -1,12 +1,12 @@
-# ORVECTA — launch and operating runbook
+# QUIVANTA — launch and operating runbook
 
 **Updated:** 18 September 2026.  
 **Release type:** Robinhood Chain Testnet prototype.  
-**Public identity:** ORVECTA · ticker `ORVX` · `orvecta.xyz` · `@orvecta`. Availability evidence is time-sensitive; naming checks are not completed registrations.
+**Public identity:** QUIVANTA · ticker `QVNT` · `quivanta.xyz` · `@quivanta`. Availability evidence is time-sensitive; naming checks are not completed registrations.
 
 ## 1. What this release is
 
-ORVECTA demonstrates a 32-benchmark global-market interface and an onchain settlement loop with 1–20x simulated leverage using worthless dUSD on Robinhood Chain Testnet. It is not a licensed real-money exchange, live benchmark feed or production perpetual engine. A website deployment should retain the testnet and simulated-data disclosures.
+QUIVANTA demonstrates a 32-benchmark global-market interface and an onchain settlement loop with 1–20x simulated leverage using worthless dUSD on Robinhood Chain Testnet. It is not a licensed real-money exchange, live benchmark feed or production perpetual engine. A website deployment should retain the testnet and simulated-data disclosures.
 
 The website is in `website/`. Contract source, executable scripts and authoritative contract behavior are in `contracts/`. Research, business assumptions and launch operations are in `docs/`. Brand and social assets are in `brand/` and `twitter/`.
 
@@ -16,7 +16,7 @@ The final version 2 deployment and onchain smoke-test records dated 18 September
 
 | Artifact | Verified result |
 |---|---|
-| dUSD | [`0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea`](https://explorer.testnet.chain.robinhood.com/address/0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea?tab=contract) — deployed and source-verified; immutable on-chain name is `LATQOR Demo USD`, while current source uses `ORVECTA Demo USD` for any future deployment |
+| dUSD | [`0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea`](https://explorer.testnet.chain.robinhood.com/address/0x6bfcF1343F7c1631cb5aD61513ae07Ab09f2F1ea?tab=contract) — deployed and source-verified; immutable on-chain name is `LATQOR Demo USD`, while current source uses `QUIVANTA Demo USD` for any future deployment |
 | Engine | [`0xaa790F4610a38e925f19fB054E2ADf68cD8de38d`](https://explorer.testnet.chain.robinhood.com/address/0xaa790F4610a38e925f19fB054E2ADf68cD8de38d?tab=contract) — deployed and source-verified |
 | Round trip | Faucet, exact 100 dUSD approval, deposit 100 dUSD, open 25 dUSD margin at 20x, close at unchanged demo price, withdraw 100 dUSD — passed |
 | Final withdrawal | [Transaction receipt](https://explorer.testnet.chain.robinhood.com/tx/0x599c0d291f4fd5d5567109cccce9bdbf90eb9cd91cd787fbd2adc7354bf673b8) |
@@ -33,13 +33,13 @@ Never serve the repository root: it contains the private development key. Publis
 
 | Area | Evidence to inspect | Completion standard |
 |---|---|---|
-| Selected name | Delivered brand/availability research | Exact matching `orvecta.xyz` and `@orvecta`; timestamp and method preserved |
+| Selected name | Delivered brand/availability research | Exact matching `quivanta.xyz` and `@quivanta`; timestamp and method preserved |
 | Domain | Owner's registrar account | Registered to the correct legal owner; renewal and account recovery configured |
 | X identity | Owner's authenticated X account | Handle actually assigned; profile art/bio uploaded; recovery under owner control |
 | Website build | `website/package.json`, build output and QA results | Build succeeds; mobile/desktop routes and key failure states work |
 | Testnet deployment | `contracts/deployments/robinhood-testnet.json` | Correct chain, nonempty bytecode, successful deployment receipts |
 | Real chain round trip | `contracts/deployments/smoke-test.json` | Faucet/approval/deposit/open/close/withdraw records verified |
-| Source verification | `contracts/deployments/source-verification.json` and `contracts/deployments/historical/latqor-demo-usd/` | Read actual verification status; the historical dUSD source is kept separately from the current ORVECTA source |
+| Source verification | `contracts/deployments/source-verification.json` and `contracts/deployments/historical/latqor-demo-usd/` | Read actual verification status; the historical dUSD source is kept separately from the current QUIVANTA source |
 | Contract tests | `npm test` output in `contracts/` | Required suite passes on the current source |
 | Frontend contract configuration | Generated public `frontend.json` and frontend integration | Addresses and ABIs match the verified deployment |
 | Hosting | Provider deployment record and live URL | HTTPS, correct routes, no secret files, and rollback ready |
@@ -169,7 +169,7 @@ Read [the contract README](../contracts/README.md) and deployed code before rely
 
 ### Domain
 
-Recheck `orvecta.xyz` immediately before purchase through a reputable registrar. The owner should complete purchase under their own account and desired legal registrant details, with renewal, recovery and registrar security configured. A “not found” registry result only means unregistered at check time; it does not reserve the name or settle trademark rights.
+Recheck `quivanta.xyz` immediately before purchase through a reputable registrar. The owner should complete purchase under their own account and desired legal registrant details, with renewal, recovery and registrar security configured. A “not found” registry result only means unregistered at check time; it does not reserve the name or settle trademark rights.
 
 Once a hosting deployment exists, enter the DNS records supplied by that hosting provider for the apex and, if desired, `www`. Use the provider's exact targets instead of copying generic IP addresses. Enable HTTPS, select one canonical hostname and configure redirects. Verify the live site from a second network and check that HTTPS certificates cover the published hostnames.
 
@@ -177,7 +177,7 @@ The repository does not itself purchase a domain, host DNS or provision public h
 
 ### X account
 
-The owner should create or rename an authenticated account to `@orvecta`, using the prepared ORVECTA display name, bio, avatar and banner. A public missing-profile response alone is not proof of assignability; preserve the stronger naming-check evidence where provided and verify the handle during actual account setup. The final assignment and platform terms are completed by the owner.
+The owner should create or rename an authenticated account to `@quivanta`, using the prepared QUIVANTA display name, bio, avatar and banner. A public missing-profile response alone is not proof of assignability; preserve the stronger naming-check evidence where provided and verify the handle during actual account setup. The final assignment and platform terms are completed by the owner.
 
 Use the prepared English launch posts only after the linked website works publicly. Preserve testnet/simulation language. Do not use partner logos, copied competitor media, fictitious adoption numbers or airdrop promises. Check image crops on both mobile and desktop; publish the JPEG artwork supplied in `twitter/` with accessible alt text.
 

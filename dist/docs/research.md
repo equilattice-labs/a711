@@ -1,4 +1,4 @@
-# ORVECTA — research and design rationale
+# QUIVANTA — research and design rationale
 
 **Checked:** 18 September 2026, Asia/Shanghai.  
 **Method:** direct, read-only HTTP retrieval of public webpages and their published stylesheets. Content and styling observations below come from returned HTML/CSS. The browser connector was unavailable in this research pass, so these notes do not claim screenshot-based visual inspection or a completed competitor transaction. Source statements describe their publishers' claims, not independent audits.
@@ -10,7 +10,7 @@
 | [Perpdex homepage](https://www.perpdex.lat/) | HTTP 200 | “Every stock index. One balance”; 31 national benchmarks, local index points, USDG settlement on Robinhood Chain, up to 20x leverage | A narrowly explained product can span many markets without multiple account models |
 | [Markets app](https://www.perpdex.lat/app) | HTTP 200 | Regional filters; index, exchange, mark, 24h change and leverage columns; 31 listed markets | Market discovery benefits from a scannable table and geography |
 | [Japan market](https://www.perpdex.lat/market/japan) | HTTP 200 | Account panel, total/unrealized/realized PnL, USDG deposit/withdraw, positions/orders/history/transfers tabs | Position lifecycle and cash movement should stay in one workspace |
-| [X profile @PerpIndex](https://x.com/PerpIndex) | HTTP 200, readable public profile/posts | Bio describes 31 index perps, up to 20x, “NoKyc,” and Robinhood Chain; pinned post says live | These are competitor statements; ORVECTA must not adopt unverified legal, maturity or “first” claims |
+| [X profile @PerpIndex](https://x.com/PerpIndex) | HTTP 200, readable public profile/posts | Bio describes 31 index perps, up to 20x, “NoKyc,” and Robinhood Chain; pinned post says live | These are competitor statements; QUIVANTA must not adopt unverified legal, maturity or “first” claims |
 
 ### Mechanisms stated by the competitor
 
@@ -20,11 +20,11 @@
 - The homepage distinguishes order submission from execution: it says orders can be submitted any time, margin is set aside, and the position opens at the **next live price** of the index.
 - The public market table lists names and exchanges across the Americas, Europe, Asia/Pacific and Middle East/Africa.
 
-That fourth point is the most important operational observation. A statement about anytime order acceptance is not evidence of continuous, fresh 24/7 cash-index pricing. ORVECTA should make the distinction more explicit and implement only behavior that the contracts and keeper support.
+That fourth point is the most important operational observation. A statement about anytime order acceptance is not evidence of continuous, fresh 24/7 cash-index pricing. QUIVANTA should make the distinction more explicit and implement only behavior that the contracts and keeper support.
 
-### Canonical benchmark inventory for ORVECTA's synthetic testnet
+### Canonical benchmark inventory for QUIVANTA's synthetic testnet
 
-The local implementation catalog is `contracts/config/markets.json`. The final **32-identifier** scope includes Indonesia's JCI from the follow-up reference snapshot described below; their values in ORVECTA are invented demonstration fixtures, not retrieved index prices or a representation of a licensed index product. This release's inventory is fixed to that snapshot rather than automatically following later competitor changes.
+The local implementation catalog is `contracts/config/markets.json`. The final **32-identifier** scope includes Indonesia's JCI from the follow-up reference snapshot described below; their values in QUIVANTA are invented demonstration fixtures, not retrieved index prices or a representation of a licensed index product. This release's inventory is fixed to that snapshot rather than automatically following later competitor changes.
 
 | Region | Count | Market identifiers |
 |---|---:|---|
@@ -39,7 +39,7 @@ This inventory has no US benchmark. STOXX50 is a regional benchmark. Featured ex
 
 The returned market HTML contained em dashes for marks/changes and “Loading live prices.” The Japan page returned “Loading market.” No wallet was connected and no competitor contract was audited. We therefore verified the public information architecture and claims, not successful funding, fills, liquidation safety, actual liquidity or actual live-data quality.
 
-At the initial retrieval on **18 September 2026**, a recent X post claimed Indonesia/JCI and dark mode had been added, while the homepage and app still enumerated **31 markets**. A follow-up homepage retrieval at **2026-09-18 09:46:12 UTC / 17:46:12 Asia/Shanghai** returned **32**, including JCI/Jakarta Composite for Indonesia; its inventory evidence is in `contracts/config/reference-check.json`. ORVECTA's final release scope was fixed at that 32-market snapshot. The initial table above records the first retrieval rather than overwriting its history. These observations show why all surfaces should not be assumed synchronized. The profile's “NoKyc” language does not establish that an equivalent business can legally omit customer checks.
+At the initial retrieval on **18 September 2026**, a recent X post claimed Indonesia/JCI and dark mode had been added, while the homepage and app still enumerated **31 markets**. A follow-up homepage retrieval at **2026-09-18 09:46:12 UTC / 17:46:12 Asia/Shanghai** returned **32**, including JCI/Jakarta Composite for Indonesia; its inventory evidence is in `contracts/config/reference-check.json`. QUIVANTA's final release scope was fixed at that 32-market snapshot. The initial table above records the first retrieval rather than overwriting its history. These observations show why all surfaces should not be assumed synchronized. The profile's “NoKyc” language does not establish that an equivalent business can legally omit customer checks.
 
 The initially attempted `https://app.perpdex.lat/` connection failed. The working app URL was discovered from the homepage's own links: `https://www.perpdex.lat/app`.
 
@@ -47,11 +47,11 @@ The initially attempted `https://app.perpdex.lat/` connection failed. The workin
 
 The homepage uses a concise proposition, a numerical market/leverage summary, a three-part deposit/trade/anytime-order explanation, a long benchmark list and repeated launch-app calls to action. The public stylesheets specify Roobert display headings from 60px on small layouts up to 128px on large layouts, negative letter spacing, white and near-black surfaces, purple accents, responsive grids, flag assets, cards and staggered opacity/translation transitions.
 
-These are competitor observations, not an ORVECTA art direction. The current ORVECTA implementation has moved away from a light editorial market-atlas treatment: it uses a dark crypto-terminal workspace with quote rows, account state, wallet actions, and a focused execution ticket. Its layout, wording, mark and component code are original; the product surface should read as a trading application rather than a technology-marketing homepage.
+These are competitor observations, not an QUIVANTA art direction. The current QUIVANTA implementation has moved away from a light editorial market-atlas treatment: it uses a dark crypto-terminal workspace with quote rows, account state, wallet actions, and a focused execution ticket. Its layout, wording, mark and component code are original; the product surface should read as a trading application rather than a technology-marketing homepage.
 
 ## 2. Robinhood Chain: authoritative integration facts
 
-| Topic | Official source | Verified statement | ORVECTA action |
+| Topic | Official source | Verified statement | QUIVANTA action |
 |---|---|---|---|
 | Network purpose and EVM tooling | [About Robinhood Chain](https://docs.robinhood.com/chain/) | Permissionless Ethereum-compatible L2, Arbitrum Dedicated Blockchains, ETH gas; standard Solidity/EVM tooling | Use ordinary EVM wallet and deployment tooling |
 | Mainnet and testnet | [Connecting](https://docs.robinhood.com/chain/connecting) | Mainnet chain ID 4663; testnet 46630 | Pin the prototype to 46630; do not infer network from a token name |
@@ -64,30 +64,30 @@ These are competitor observations, not an ORVECTA art direction. The current ORV
 | Corporate-action pause | [Oracles and price feeds](https://docs.robinhood.com/chain/oracles-and-price-feeds) | `oraclePaused()` is advisory; freshness remains necessary | Treat pauses as unavailable data, not zero or tradable stale values |
 | Signed fast data | [Data Streams](https://docs.robinhood.com/chain/data-streams) | Pull-based signed reports verified onchain; a mainnet verifier is documented for chain 4663 | Coverage, rights and testnet availability must still be confirmed market by market |
 
-All above documentation URLs returned HTTP 200. The current official documentation describes Robinhood Chain as live and lists both networks. The correct project statement is **“ORVECTA runs its prototype on Robinhood Chain Testnet”**, not “Robinhood Chain only exists on testnet.”
+All above documentation URLs returned HTTP 200. The current official documentation describes Robinhood Chain as live and lists both networks. The correct project statement is **“QUIVANTA runs its prototype on Robinhood Chain Testnet”**, not “Robinhood Chain only exists on testnet.”
 
 Neither a chain integration nor a listing in an ecosystem directory creates endorsement, affiliation or a commercial partnership. Robinhood's own ecosystem page explicitly disclaims those implications.
 
 ### What was not established
 
-This research did not establish licensed feeds for ORVECTA's 32 synthetic benchmark labels, including featured NIKKEI, DAX and FTSE100, rights to redistribute actual index values, a production collateral agreement, a liquidity commitment, an audit of ORVECTA, or permission to offer derivatives in a particular country. These are commercial and launch-gate work items.
+This research did not establish licensed feeds for QUIVANTA's 32 synthetic benchmark labels, including featured NIKKEI, DAX and FTSE100, rights to redistribute actual index values, a production collateral agreement, a liquidity commitment, an audit of QUIVANTA, or permission to offer derivatives in a particular country. These are commercial and launch-gate work items.
 
 ## 3. Mainstream onchain product references
 
-These are established, visible onchain brands selected for relevant communication patterns, not a verified ranking of popularity or trading volume. Any metrics printed on their websites are their claims and are not reused as ORVECTA metrics.
+These are established, visible onchain brands selected for relevant communication patterns, not a verified ranking of popularity or trading volume. Any metrics printed on their websites are their claims and are not reused as QUIVANTA metrics.
 
 | Reference | Observed content structure | Published visual evidence | Pattern to adapt |
 |---|---|---|---|
-| [Hyperliquid](https://hyperliquid.xyz/) | “Infrastructure to House All Finance”; Build/Trade fork; market ticker; ecosystem apps; builder-code explanation; network/security story | Inline styling includes near-white surfaces and deep green `#03211c`; Teodor Light and ABC Diatype font declarations | Keep the useful market context and mechanism explanation, while expressing it in ORVECTA's dark terminal and execution-first layout |
+| [Hyperliquid](https://hyperliquid.xyz/) | “Infrastructure to House All Finance”; Build/Trade fork; market ticker; ecosystem apps; builder-code explanation; network/security story | Inline styling includes near-white surfaces and deep green `#03211c`; Teodor Light and ABC Diatype font declarations | Keep the useful market context and mechanism explanation, while expressing it in QUIVANTA's dark terminal and execution-first layout |
 | [Jupiter](https://jup.ag/) | Product/application first; persistent multi-product navigation; connected-wallet entry; visible swap ticket; adjacent perps, lending and portfolio routes | Public CSS includes dark `#131b24`, lime `#c7f284`, cyan `#00bef0`, mono and sans typography | Make the first useful action obvious; keep account and execution controls close |
 | [Aave](https://aave.com/) | App/Pro/Kit segmentation; product demos; market configurations; security/track-record claims; FAQ and legal footer | Public CSS emphasizes white and gray surfaces with lavender accents such as `#9896ff`; heading/body/mono roles | Mature explanations, separated audiences, risk facts and FAQs within the conversion path |
 | [Ethena](https://ethena.fi/) | Product proposition; comparison metrics with methodology notes; integration paths; transparency/reserves section; educational articles | Public CSS includes black/white and cool blue `#88b4f5`/`#adceff`; Suisse family declarations | Put mechanism, transparency and metric definitions beside marketing claims |
 
 All four homepages returned HTTP 200. Jupiter's returned HTML included an instruction to enable JavaScript alongside rendered product content; dynamic account and market behavior was not tested. Some dynamic metrics across sites appeared unpopulated in the returned document. We did not infer missing values.
 
-### Why ORVECTA's selected direction fits
+### Why QUIVANTA's selected direction fits
 
-The selected direction is an original **dark crypto-terminal workspace**: charcoal panels, mint positive states, coral risk states, amber freshness warnings, compact quote rows, visible wallet status and a focused trading ticket. It borrows the communication principle of institutional clarity and the interaction principle of immediate utility while using the visual language of a crypto trading app rather than a technology-marketing site. ORVECTA's synthetic testnet scope mirrors the final observed 32-benchmark universe and offers 1–20x simulated leverage, while the future real-money rollout remains gated and staged. The list includes a regional Eurozone benchmark, so “32 benchmarks” is accurate and “32 countries” is not.
+The selected direction is an original **dark crypto-terminal workspace**: charcoal panels, mint positive states, coral risk states, amber freshness warnings, compact quote rows, visible wallet status and a focused trading ticket. It borrows the communication principle of institutional clarity and the interaction principle of immediate utility while using the visual language of a crypto trading app rather than a technology-marketing site. QUIVANTA's synthetic testnet scope mirrors the final observed 32-benchmark universe and offers 1–20x simulated leverage, while the future real-money rollout remains gated and staged. The list includes a regional Eurozone benchmark, so “32 benchmarks” is accurate and “32 countries” is not.
 
 The project should feel like a comprehensible global-market workspace, not a catalogue of speculative token promises. Motion can explain geography, time and market focus; it should respect reduced-motion settings and never obstruct account controls. Market prices and chart series must carry demonstration labels where they are simulated. A polished interface is not evidence of production readiness.
 
@@ -96,7 +96,7 @@ The project should feel like a comprehensible global-market workspace, not a cat
 | Source | Retrieval | Appropriate use |
 |---|---|---|
 | [FCA: ban on sale of crypto-derivatives to retail consumers](https://www.fca.org.uk/news/press-releases/fca-bans-sale-crypto-derivatives-retail-consumers) | HTTP 200 | Demonstrates that product classification and distribution restrictions matter; the notice specifically concerns derivatives referencing certain cryptoassets and does not by itself classify an equity-index perp |
-| [IOSCO: Principles for Financial Benchmarks](https://www.iosco.org/library/pubdocs/pdf/IOSCOPD415.pdf) | HTTP 200 PDF | Further-reading reference for benchmark governance and methodology diligence; not a ORVECTA license or approval |
+| [IOSCO: Principles for Financial Benchmarks](https://www.iosco.org/library/pubdocs/pdf/IOSCOPD415.pdf) | HTTP 200 PDF | Further-reading reference for benchmark governance and methodology diligence; not a QUIVANTA license or approval |
 | S&P index-licensing page attempted | HTTP 403 security response | No substantive licensing terms verified; do not invent price, rights or availability |
 | FTSE Russell index-licensing URL attempted | HTTP 404 | No substantive terms verified; request the actual applicable agreement directly |
 

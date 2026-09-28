@@ -62,13 +62,13 @@ async function verify() {
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-shell">
-      <RouterLink to="/" aria-label="ORVECTA home"><Brand /></RouterLink>
+      <RouterLink to="/" aria-label="Quivanta home"><Brand /></RouterLink>
       <nav :class="{ expanded: menu }" aria-label="Main navigation">
-        <RouterLink to="/trade">Markets</RouterLink><RouterLink to="/#how">How it works</RouterLink
-        ><RouterLink to="/learn">Learn <ArrowUpRight :size="13" /></RouterLink>
+        <RouterLink to="/trade">Trade</RouterLink><RouterLink to="/">Markets</RouterLink
+        ><RouterLink to="/learn">Risk guide <ArrowUpRight :size="13" /></RouterLink>
       </nav>
       <div class="nav-actions">
-        <span class="network-badge"><i></i> Robinhood Chain</span
+        <span class="network-badge"><i></i> RH TESTNET</span
         ><button class="wallet-button" @click="showWallet">
           <Wallet :size="15" /><span>{{
             address ? address.slice(0, 6) + '…' + address.slice(-4) : 'Connect wallet'
@@ -88,7 +88,7 @@ async function verify() {
   <footer class="site-footer">
     <div class="footer-top">
       <RouterLink to="/"><Brand /></RouterLink>
-      <p>A new perspective on global markets.</p>
+      <p>Wallet-first index markets on Robinhood Chain testnet.</p>
       <div>
         <RouterLink to="/learn">Documentation <ArrowUpRight :size="14" /></RouterLink
         ><a href="/docs/business-plan.pdf" target="_blank"
@@ -97,7 +97,7 @@ async function verify() {
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {{ new Date().getFullYear() }} ORVECTA</span
+      <span>© {{ new Date().getFullYear() }} Quivanta</span
       ><span>Independent project. Not affiliated with Robinhood.</span
       ><RouterLink to="/learn#risk">Testnet & risk disclosure</RouterLink>
     </div>
